@@ -8,6 +8,7 @@ import { CryptService } from '../services/crypt.service';
   imports: [
     MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
   ],
+  exports: [UsersService],
   providers: [UsersService, CryptService],
 })
 export class UsersModule {}

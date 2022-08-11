@@ -10,7 +10,7 @@ export class Session {
   refreshToken: string;
 
   @Prop({ required: true })
-  expiresIn: number;
+  expiresIn: Date;
 
   @Prop({ type: { type: Types.ObjectId, ref: User.name } })
   user: User;
