@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { sign } from 'jsonwebtoken';
+import { sign, verify } from 'jsonwebtoken';
+import { User } from '../schemas/user.schema';
 
 @Injectable()
 export class JwtService {
@@ -13,5 +14,13 @@ export class JwtService {
     return sign({ id: userId }, process.env.ACCESS_TOKEN_SECRET, {
       expiresIn: '30m',
     });
+  }
+
+  verifyAccessToken(token: string) {
+    return verify(token, process.env.ACCESS_TOKEN_SECRET) as User;
+  }
+
+  verifyRefreshToken(token: string) {
+    return verify(token, process.env.REFRESH_TOKEN_SECRET) as User;
   }
 }

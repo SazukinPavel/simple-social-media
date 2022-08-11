@@ -4,8 +4,8 @@ import { NodeEnv } from '../types/NodeEnvEnum';
 
 @Injectable()
 export class CookiesService {
-  setAuthCookies(res: Response, refreshTokenId: string) {
-    res.cookie('token', refreshTokenId, {
+  setAuthCookies(res: Response, refreshToken: string) {
+    res.cookie('token', refreshToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === NodeEnv.PRODUCTION ? true : false,
       path: '/api',

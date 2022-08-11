@@ -28,19 +28,19 @@ export class UsersService {
       this.findUserByName(nameOrEmail),
       this.findUserByEmail(nameOrEmail),
     ]);
-    if (!userByEmail && !userByName) {
+    if (!userByName && !userByEmail) {
       throw new BadRequestException(
-        'Нет пользователя с таким именем или почтой',
+        'There is no user with this name or email ',
       );
     }
     return userByName ?? userByEmail;
   }
 
-  private findUserByEmail(email: string) {
+  findUserByEmail(email: string) {
     return this.userModel.findOne({ email });
   }
 
-  private findUserByName(name: string) {
+  findUserByName(name: string) {
     return this.userModel.findOne({ username: name });
   }
 }

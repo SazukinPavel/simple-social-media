@@ -4,11 +4,14 @@ import { Session } from '../schemas/session.schema';
 import { Model } from 'mongoose';
 import { CreateSessionDto } from './dto/CreateSession.dto';
 import { UpdateSessionDto } from './dto/UpdateSession.dto';
+import { User } from '../schemas/user.schema';
+import { JwtService } from '../services/jwt.service';
 
 @Injectable()
 export class SessionsService {
   constructor(
     @InjectModel(Session.name) private sessionModel: Model<Session>,
+    private jwtService: JwtService,
   ) {}
 
   async create({ user, refreshToken }: CreateSessionDto) {
@@ -19,6 +22,18 @@ export class SessionsService {
     });
     session.save();
     return session;
+  }
+
+  async createOrUpdate(user: User) {
+    const session = await this.sessionModel.findOne({ user });
+    const refreshToken = this.jwtService.signRefreshToken(user._id);
+    if (session) {
+      return this.update({
+        sessionId: session._id.toString(),
+        refreshToken,
+      });
+    }
+    return this.create({ user, refreshToken });
   }
 
   async update({ sessionId, refreshToken }: UpdateSessionDto) {
@@ -32,5 +47,9 @@ export class SessionsService {
   async delete(sessionId: string) {
     const deletedSession = await this.sessionModel.findByIdAndDelete(sessionId);
     return !!deletedSession;
+  }
+
+  findById(id: string) {
+    return this.sessionModel.findById(id).populate(User.name);
   }
 }
