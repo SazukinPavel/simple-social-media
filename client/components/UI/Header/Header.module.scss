@@ -1,0 +1,16 @@
+.Header{
+  background-color: #2e97ff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  .Logo{
+    a{
+      color: white;
+      font-size: 40px;
+      transition: all 1s;
+      &:hover{
+        color: lightgray;
+      }
+    }
+  }
+}
