@@ -5,13 +5,13 @@ export type UserDocument = User & Document;
 
 @Schema()
 export class User {
-  @Prop({ type: Types.ObjectId })
+  @Prop({ type: Types.ObjectId, autoCreated: true })
   _id: string;
 
   @Prop({ required: true })
   username: string;
 
-  @Prop({ required: true })
+  @Prop()
   bio: string;
 
   @Prop({ required: true })

@@ -1,16 +1,37 @@
 import {NextPage} from "next";
 import Title from "../../components/seo/Title";
 import styles from "../../styles/Register.module.scss";
-import FormInput from "../../components/ui/FormInput";
-import Button from "../../components/ui/Button/Button";
 import {useForm} from "react-hook-form";
 import RegisterDto from "../../types/dto/Register.dto";
+import {useEffect, useState} from "react";
+import { registerThunk, resetError} from "../../store/slices/authSlice";
+import {useTypedDispatch, useTypedSelector} from "../../hooks";
+import {Button, FormInput, LoadingButton} from "../../components/ui";
+import {useRouter} from "next/router";
 
 const Register:NextPage=()=>{
     const {formState,reset,handleSubmit,register}=useForm<RegisterDto>({mode:'onChange'})
-    const registerClick=()=>{
+    const [isLoading,setIsLoading]=useState(false)
+    const dispatch=useTypedDispatch()
+    const {isAuth,isError,errorMessage}=useTypedSelector((state)=>state.auth)
+    const router=useRouter()
 
+    const registerClick=async (dto:RegisterDto)=>{
+        setIsLoading(true)
+        await dispatch(registerThunk(dto))
+        if(isAuth){
+            router.push('/')
+        }
+        setTimeout(()=>{
+            setIsLoading(false)
+        },5000)
     }
+
+    useEffect(()=>{
+        return ()=>{
+            dispatch(resetError())
+        }
+    },[])
 
     return(
         <div className={[styles.Register].join(' ')}>
@@ -18,7 +39,7 @@ const Register:NextPage=()=>{
             <h1>Please fill out the form</h1>
             <form onSubmit={handleSubmit(registerClick)}>
                 <FormInput
-                    registerFunc={()=>register('name',{
+                    registerFunc={()=>register('username',{
                         required:'Username is required field',
                         maxLength:{value:25,message:'Maximum username length 25 characters'}})}
                     text={'Username:'}
@@ -46,10 +67,11 @@ const Register:NextPage=()=>{
                     isError={!!formState.errors.password}
                     errorMessage={formState.errors.password?.message}
                 />
+                <p>{isError && errorMessage}</p>
                 <div className={styles.buttons}>
                     <Button>Back</Button>
                     <Button onClick={()=>reset()}>Reset</Button>
-                    <Button type='submit'>Register</Button>
+                    <LoadingButton isLoading={isLoading} type='submit'>Register</LoadingButton>
                 </div>
             </form>
         </div>

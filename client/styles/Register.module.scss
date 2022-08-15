@@ -1,18 +1,25 @@
 .Register{
   background-color: #2e97ff;
-  margin: 2rem auto;
+  margin: 2rem auto 1rem;
   width: 600px;
   border-radius: 1rem;
   padding: 2rem;
+  color: white;
   form{
     margin: auto;
+    input{
+      font-size: 2rem;
+    }
   }
   h1{
+    text-align: center;
     font-size: 1.5rem;
-    color: white;
+  }
+  p{
+    height: 1rem;
+    font-size: 1rem;
     text-align: center;
   }
-
   .buttons{
     display: flex;
     justify-content: center;

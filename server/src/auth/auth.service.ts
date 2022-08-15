@@ -42,13 +42,13 @@ export class AuthService {
     const userWithSameName = await this.usersService.findUserByName(
       dto.username,
     );
-    if (!userWithSameName) {
+    if (userWithSameName) {
       throw new BadRequestException('A user with this name already exists');
     }
     const userWithSameEmail = await this.usersService.findUserByEmail(
       dto.email,
     );
-    if (!userWithSameEmail) {
+    if (userWithSameEmail) {
       throw new BadRequestException('A user with this email already exists');
     }
     const user = await this.usersService.addUser({ ...dto });

@@ -1,9 +1,10 @@
 .Login{
   background-color: #2e97ff;
-  margin: 2rem auto;
+  margin: 2rem auto 1rem;
   width: 600px;
   border-radius: 1rem;
   padding: 2rem;
+  color: white;
   form{
     margin: auto;
     input{
@@ -11,9 +12,13 @@
     }
   }
   h1{
-    color: white;
     text-align: center;
     font-size: 1.5rem;
+  }
+  p{
+    height: 1rem;
+    font-size: 1rem;
+    text-align: center;
   }
 
   .buttons{

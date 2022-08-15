@@ -1,14 +1,13 @@
 import {NextPage} from "next";
 import Title from "../../components/seo/Title";
-import FormInput from "../../components/ui/FormInput";
 import {useForm} from "react-hook-form";
 import LoginDto from "../../types/dto/Login.dto";
 import styles from '../../styles/Login.module.scss'
-import Button from "../../components/ui/Button/Button";
 import {useTypedDispatch, useTypedSelector} from "../../hooks";
-import {useState} from "react";
-import {loginThunk} from "../../store/slices/authSlice";
+import {useEffect, useState} from "react";
+import {loginThunk, resetError} from "../../store/slices/authSlice";
 import {useRouter} from "next/router";
+import {Button, FormInput, LoadingButton} from "../../components/ui";
 
 const Login:NextPage=()=>{
 
@@ -18,21 +17,28 @@ const Login:NextPage=()=>{
     const router = useRouter()
     const dispatch=useTypedDispatch()
 
+    useEffect(()=>{
+        return ()=>{
+            dispatch(resetError())
+        }
+    },[])
+
     const loginClick=async (dto:LoginDto)=>{
         setIsLoading(true)
         await dispatch(loginThunk(dto))
         if(isAuth){
             router.push('/')
         }
-        setIsLoading(false)
+        setTimeout(()=>{
+            setIsLoading(false)
+
+        },5000)
     }
 
     return(
         <div className={[styles.Login].join(' ')}>
             <Title title={'Login'}/>
-            {isLoading && <h1>Loading</h1>}
             <h1>Please fill out the form</h1>
-            <h3>{isError && errorMessage}</h3>
             <form onSubmit={handleSubmit(loginClick)}>
                 <FormInput
                     registerFunc={()=>register('nameOrEmail',{
@@ -54,10 +60,11 @@ const Login:NextPage=()=>{
                     isError={!!formState.errors.password}
                     errorMessage={formState.errors.password?.message}
                 />
+                <p>{isError && errorMessage}</p>
                 <div className={styles.buttons}>
                     <Button>Back</Button>
                     <Button onClick={()=>reset()}>Reset</Button>
-                    <Button type='submit'>Login</Button>
+                    <LoadingButton isLoading={isLoading} type='submit'>Login</LoadingButton>
                 </div>
             </form>
         </div>
