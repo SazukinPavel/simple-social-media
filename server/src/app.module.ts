@@ -1,12 +1,12 @@
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module } from '@nestjs/common';
 import { AuthModule } from './auth/auth.module';
 import { PostsModule } from './posts/posts.module';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './users/users.module';
 import { SessionsModule } from './sessions/sessions.module';
-import { GraphQLModule } from '@nestjs/graphql';
-import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { AuthMiddleware } from './middlewares/auth.middleware';
+import { JwtService } from './services';
 
 @Module({
   imports: [
@@ -16,11 +16,12 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
     MongooseModule.forRoot(process.env.DATABASE_CONNECTION_STRING),
     UsersModule,
     SessionsModule,
-    GraphQLModule.forRoot<ApolloDriverConfig>({
-      driver: ApolloDriver,
-    }),
   ],
   controllers: [],
-  providers: [],
+  providers: [JwtService],
 })
-export class AppModule {}
+export class AppModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(AuthMiddleware).forRoutes('*');
+  }
+}

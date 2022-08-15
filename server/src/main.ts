@@ -7,10 +7,13 @@ import { AuthMiddleware } from './middlewares/auth.middleware';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api');
+  app.enableCors({
+    origin: process.env.CLIENT_URL,
+    credentials: true,
+    methods: ['POST', 'GET', 'PUT', 'DELETE'],
+  });
   app.useGlobalPipes(new ValidationPipe());
   app.use(cookieParser());
-  app.use(AuthMiddleware);
-  app.enableCors({ origin: process.env.CLIENT_URL, credentials: true });
   await app.listen(process.env.PORT);
 }
 

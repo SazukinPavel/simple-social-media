@@ -17,6 +17,7 @@ const MyLayout:NextPage<MyLayoutProps>=({children})=>{
             <main>
                 {children}
             </main>
+            <Footer/>
         </>
     )
 }

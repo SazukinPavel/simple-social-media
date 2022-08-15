@@ -1,16 +1,14 @@
 .Register{
   background-color: #2e97ff;
   margin: 2rem auto;
-  width: 800px;
+  width: 600px;
   border-radius: 1rem;
   padding: 2rem;
   form{
     margin: auto;
-    input{
-      font-size: 2rem;
-    }
   }
   h1{
+    font-size: 1.5rem;
     color: white;
     text-align: center;
   }
@@ -19,7 +17,7 @@
     display: flex;
     justify-content: center;
     button{
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
 }

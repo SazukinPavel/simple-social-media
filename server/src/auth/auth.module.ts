@@ -3,19 +3,19 @@ import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Session, SessionSchema } from '../schemas/session.schema';
-import { UsersService } from '../users/users.service';
 import { CryptService, CookiesService, JwtService } from '../services';
 import { SessionsService } from '../sessions/sessions.service';
+import { UsersModule } from '../users/users.module';
 
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: Session.name, schema: SessionSchema }]),
+    UsersModule,
   ],
   controllers: [AuthController],
   providers: [
     AuthService,
     JwtService,
-    UsersService,
     CryptService,
     CookiesService,
     SessionsService,

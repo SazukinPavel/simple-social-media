@@ -5,19 +5,34 @@ import {useForm} from "react-hook-form";
 import LoginDto from "../../types/dto/Login.dto";
 import styles from '../../styles/Login.module.scss'
 import Button from "../../components/ui/Button/Button";
+import {useTypedDispatch, useTypedSelector} from "../../hooks";
+import {useState} from "react";
+import {loginThunk} from "../../store/slices/authSlice";
+import {useRouter} from "next/router";
 
 const Login:NextPage=()=>{
 
     const {register,reset,formState,handleSubmit}=useForm<LoginDto>({mode:'onChange'})
+    const [isLoading,setIsLoading]=useState(false)
+    const {errorMessage,isError,isAuth}=useTypedSelector((state)=>state.auth)
+    const router = useRouter()
+    const dispatch=useTypedDispatch()
 
-    const loginClick=()=>{
-
+    const loginClick=async (dto:LoginDto)=>{
+        setIsLoading(true)
+        await dispatch(loginThunk(dto))
+        if(isAuth){
+            router.push('/')
+        }
+        setIsLoading(false)
     }
 
     return(
         <div className={[styles.Login].join(' ')}>
-            <Title title={'login'}/>
+            <Title title={'Login'}/>
+            {isLoading && <h1>Loading</h1>}
             <h1>Please fill out the form</h1>
+            <h3>{isError && errorMessage}</h3>
             <form onSubmit={handleSubmit(loginClick)}>
                 <FormInput
                     registerFunc={()=>register('nameOrEmail',{

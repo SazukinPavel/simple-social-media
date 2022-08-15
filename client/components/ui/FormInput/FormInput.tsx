@@ -13,7 +13,7 @@ const FormInput:React.FC<InputProps>=({text,isError,registerFunc,errorMessage,..
     return (
            <div className={styles.InputDiv}>
                <label >{text}</label>
-               <input className={[styles.Input,isError? styles.Error: styles.Good].join('  ')} {...registerFunc()} {...props}/>
+               <input autoComplete="off" className={[styles.Input,isError? styles.Error: styles.Good].join('  ')} {...registerFunc()} {...props}/>
                <div className={styles.Message}><span>{isError && errorMessage}</span></div>
            </div>
     )
