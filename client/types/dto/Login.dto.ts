@@ -1,4 +1,4 @@
 export default interface LoginDto{
-    nameOrEmail:string
+    emailOrName:string
     password:string
 }

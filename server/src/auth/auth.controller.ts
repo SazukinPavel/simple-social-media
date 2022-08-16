@@ -1,7 +1,6 @@
 import { Body, Controller, Post, Res } from '@nestjs/common';
 import { LoginDto } from './dto/Login.dto';
 import { RegisterDto } from './dto/Register.dto';
-import { AuthResponseDto } from './dto/AuthResponse.dto';
 import { AuthService } from './auth.service';
 import { Response } from 'express';
 import { Cookies } from '../decorators/cookie.decorator';
@@ -13,8 +12,8 @@ export class AuthController {
   @Post('register')
   async register(
     @Body() dto: RegisterDto,
-    @Res() res: Response,
-  ): Promise<AuthResponseDto> {
+    @Res({ passthrough: true }) res: Response,
+  ) {
     const user = await this.authService.register(dto);
     return this.authService.authorize(user, res);
   }
@@ -22,8 +21,8 @@ export class AuthController {
   @Post('login')
   async login(
     @Body() dto: LoginDto,
-    @Res() res: Response,
-  ): Promise<AuthResponseDto> {
+    @Res({ passthrough: true }) res: Response,
+  ) {
     const user = await this.authService.login(dto);
     return this.authService.authorize(user, res);
   }
@@ -31,7 +30,7 @@ export class AuthController {
   @Post('access')
   async refreshAccessToken(
     @Cookies('token') refreshToken: string,
-    @Res() res: Response,
+    @Res({ passthrough: true }) res: Response,
   ) {
     const user = await this.authService.getUserByRefreshToken(refreshToken);
     return this.authService.authorize(user, res);

@@ -1,10 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { hash, compare } from 'bcryptjs';
+import { genSalt, hash, compare } from 'bcryptjs';
 
 @Injectable()
 export class CryptService {
-  hashPassword(password: string) {
-    return hash(password, process.env.PASSWORD_SECRET_KEY);
+  async hashPassword(password: string) {
+    const salt = parseInt(process.env.PASSWORD_SALT);
+    return hash(password, await genSalt(salt));
   }
 
   comparePasswords(hashPassword: string, password: string) {

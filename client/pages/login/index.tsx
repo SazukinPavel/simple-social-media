@@ -41,13 +41,13 @@ const Login:NextPage=()=>{
             <h1>Please fill out the form</h1>
             <form onSubmit={handleSubmit(loginClick)}>
                 <FormInput
-                    registerFunc={()=>register('nameOrEmail',{
+                    registerFunc={()=>register('emailOrName',{
                         required:'Username or email is required field',
                         maxLength:{value:25,message:'Maximum length 25 characters'}})}
                     text={'Username or email:'}
                     placeholder={'Enter your name or email'}
-                    isError={!!formState.errors.nameOrEmail}
-                    errorMessage={formState.errors.nameOrEmail?.message}
+                    isError={!!formState.errors.emailOrName}
+                    errorMessage={formState.errors.emailOrName?.message}
                 />
                 <FormInput
                     type={'password'}

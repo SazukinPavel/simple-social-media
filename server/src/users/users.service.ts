@@ -14,7 +14,7 @@ export class UsersService {
 
   async addUser(dto: AddUserDto) {
     const user = await this.userModel.create({ ...dto });
-    user.password = await this.cryptService.hashPassword(user.password);
+    user.password = await this.cryptService.hashPassword(dto.password);
     user.save();
     return user;
   }

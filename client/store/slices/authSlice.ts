@@ -24,11 +24,13 @@ export const registerThunk=createAsyncThunk('registerThunk',async (dto:RegisterD
         const response=await AuthService.register(dto)
         return response.data
     }catch (e){
-        return rejectWithValue((e as Error).message)
+        const data=(e as AxiosError)?.response?.data as Error
+        return rejectWithValue(data.message);
     }
 })
 
 const loginFunc=(state:WritableDraft<AuthSliceState>,authDto:AuthDto)=>{
+    resetErrorFunc(state);
     state.isAuth=true
     state.accessToken=authDto.accessToken
     state.user=authDto.user

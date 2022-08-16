@@ -44,8 +44,8 @@ const Register:NextPage=()=>{
                         maxLength:{value:25,message:'Maximum username length 25 characters'}})}
                     text={'Username:'}
                     placeholder={'Enter your name'}
-                    isError={!!formState.errors.name}
-                    errorMessage={formState.errors.name?.message}
+                    isError={!!formState.errors.username}
+                    errorMessage={formState.errors.username?.message}
                 />
                 <FormInput
                     type={'email'}
