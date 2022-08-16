@@ -9,7 +9,7 @@ import {loginThunk, resetError} from "../../store/slices/authSlice";
 import {useRouter} from "next/router";
 import {Button, FormInput, LoadingButton} from "../../components/ui";
 
-const Login:NextPage=()=>{
+const RegisterPage:NextPage=()=>{
 
     const {register,reset,formState,handleSubmit}=useForm<LoginDto>({mode:'onChange'})
     const [isLoading,setIsLoading]=useState(false)
@@ -71,4 +71,4 @@ const Login:NextPage=()=>{
     )
 }
 
-export default Login;
+export default RegisterPage;
