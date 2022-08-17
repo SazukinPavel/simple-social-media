@@ -9,7 +9,7 @@ const Home: NextPage = () => {
         <Title title={'Home'}/>
         <div >
             <h1>Welcome to <br/>Simple Social Media</h1>
-            <p>Please <Link href="/signin">sign in</Link> or <Link href="/index">login</Link></p>
+            <p>Please <Link href="/register">sign in</Link> or <Link href="/login">login</Link></p>
         </div>
       </div>
 

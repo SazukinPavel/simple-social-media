@@ -11,7 +11,7 @@ export class JwtService {
   }
 
   sighAccessToken(userId: string) {
-    return sign({ id: userId }, process.env.ACCESS_TOKEN_SECRET, {
+    return sign({ _id: userId }, process.env.ACCESS_TOKEN_SECRET, {
       expiresIn: '30m',
     });
   }

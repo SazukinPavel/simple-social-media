@@ -1,5 +1,6 @@
 import {User} from "../../../../types/User";
 import {FC} from "react";
+import styles from './AuthorizedSection.module.scss'
 
 interface AuthorizedSectionProps{
     user:User
@@ -7,7 +8,7 @@ interface AuthorizedSectionProps{
 
 const AuthorizedSection:FC<AuthorizedSectionProps>=({user})=>{
     return (
-        <div>
+        <div className={styles.AuthorizedSection}>
             <p>{user.username}</p>
         </div>
     )

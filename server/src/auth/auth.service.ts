@@ -21,20 +21,12 @@ export class AuthService {
     @InjectModel(Session.name) private sessionModel: Model<Session>,
     private usersService: UsersService,
     private jwtService: JwtService,
-    private cryptService: CryptService,
     private cookiesService: CookiesService,
     private sessionService: SessionsService,
   ) {}
 
-  async login({ emailOrName, password }: LoginDto): Promise<User> {
-    const user = await this.usersService.findUserByEmailOrName(emailOrName);
-    const isPasswordEqual = await this.cryptService.comparePasswords(
-      user.password,
-      password,
-    );
-    if (!isPasswordEqual) {
-      throw new BadRequestException('Wrong password!');
-    }
+  async login(dto: LoginDto): Promise<User> {
+    const user = this.usersService.validateUser(dto);
     return user;
   }
 
@@ -69,6 +61,9 @@ export class AuthService {
       throw new ForbiddenException('Not authorized user');
     }
     const session = await this.sessionService.findByRefreshToken(refreshToken);
+    if (!session) {
+      throw new ForbiddenException('Not founded user');
+    }
     const user = session.user;
     if (!user) {
       throw new ForbiddenException('Not valid token');

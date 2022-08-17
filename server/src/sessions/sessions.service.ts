@@ -20,7 +20,6 @@ export class SessionsService {
       expiresIn: new Date(Date.now() + 60 * 60 * 24 * 30 * 1000),
     });
     session.user = user;
-    console.log(session);
     session.save();
     return session;
   }
@@ -28,7 +27,6 @@ export class SessionsService {
   async createOrUpdate(user: User) {
     const session = await this.sessionModel.findOne({ user });
     const refreshToken = this.jwtService.signRefreshToken(user._id);
-    console.log(user);
     if (session) {
       return this.update({
         sessionId: session._id.toString(),

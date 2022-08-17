@@ -3,7 +3,7 @@ import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Session, SessionSchema } from '../schemas/session.schema';
-import { CryptService, CookiesService, JwtService } from '../services';
+import { CookiesService, JwtService } from '../services';
 import { SessionsService } from '../sessions/sessions.service';
 import { UsersModule } from '../users/users.module';
 
@@ -13,12 +13,6 @@ import { UsersModule } from '../users/users.module';
     UsersModule,
   ],
   controllers: [AuthController],
-  providers: [
-    AuthService,
-    JwtService,
-    CryptService,
-    CookiesService,
-    SessionsService,
-  ],
+  providers: [AuthService, JwtService, CookiesService, SessionsService],
 })
 export class AuthModule {}

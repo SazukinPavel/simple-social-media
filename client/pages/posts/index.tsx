@@ -1,14 +1,14 @@
 import Lenta from "../../components/busines/Lenta";
 import {useEffect} from "react";
-import {useTypedDispatch} from "../../hooks";
-import {fetchPosts} from "../../store/slices/postsSlice";
+import {useAuthorize, useTypedDispatch} from "../../hooks";
+import {FetchPosts} from "../../store/thunks/posts";
 
 const PostsPage=()=>{
 
     const dispatch=useTypedDispatch()
-
+    useAuthorize()
     useEffect(()=>{
-        dispatch(fetchPosts())
+        dispatch(FetchPosts())
     },[])
 
     return(

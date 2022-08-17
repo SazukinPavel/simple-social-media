@@ -5,9 +5,10 @@ import LoginDto from "../../types/dto/Login.dto";
 import styles from '../../styles/Login.module.scss'
 import {useTypedDispatch, useTypedSelector} from "../../hooks";
 import {useEffect, useState} from "react";
-import {loginThunk, resetError} from "../../store/slices/authSlice";
 import {useRouter} from "next/router";
 import {Button, FormInput, LoadingButton} from "../../components/ui";
+import {LoginThunk} from "../../store/thunks/auth";
+import {resetError} from "../../store/slices/authSlice";
 
 const RegisterPage:NextPage=()=>{
 
@@ -25,7 +26,7 @@ const RegisterPage:NextPage=()=>{
 
     const loginClick=async (dto:LoginDto)=>{
         setIsLoading(true)
-        await dispatch(loginThunk(dto))
+        await dispatch(LoginThunk(dto))
         if(isAuth){
             router.push('/')
         }

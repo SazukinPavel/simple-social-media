@@ -10,7 +10,7 @@ export class PostsService {
   constructor(@InjectModel(Post.name) private postModel: Model<Post>) {}
 
   findById(id: string) {
-    return this.postModel.findById(id).populate(User.name);
+    return this.postModel.findById(id).populate('user');
   }
 
   getAll() {

@@ -8,8 +8,6 @@ const Header=()=>{
 
     const {isAuth,user}=useTypedSelector(state=>state.auth)
 
-    console.log(user)
-
     return(
         <header className={styles.Header}>
             <div className={styles.Logo}>

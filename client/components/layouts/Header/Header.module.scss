@@ -2,15 +2,19 @@
   background-color: #2e97ff;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 3rem;
+  padding: 0.5rem 3rem;
   .Logo{
+    display: flex;
+    justify-content: center;
     a{
       color: white;
       font-size: 40px;
       transition: all 1s;
+      margin: auto;
       &:hover{
         color: lightgray;
       }
     }
   }
+
 }

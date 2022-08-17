@@ -4,10 +4,11 @@ import styles from "../../styles/Register.module.scss";
 import {useForm} from "react-hook-form";
 import RegisterDto from "../../types/dto/Register.dto";
 import {useEffect, useState} from "react";
-import { registerThunk, resetError} from "../../store/slices/authSlice";
 import {useTypedDispatch, useTypedSelector} from "../../hooks";
 import {Button, FormInput, LoadingButton} from "../../components/ui";
 import {useRouter} from "next/router";
+import {RegisterThunk} from "../../store/thunks/auth/";
+import {resetError} from "../../store/slices/authSlice";
 
 const Register:NextPage=()=>{
     const {formState,reset,handleSubmit,register}=useForm<RegisterDto>({mode:'onChange'})
@@ -18,7 +19,7 @@ const Register:NextPage=()=>{
 
     const registerClick=async (dto:RegisterDto)=>{
         setIsLoading(true)
-        await dispatch(registerThunk(dto))
+        await dispatch(RegisterThunk(dto))
         if(isAuth){
             router.push('/')
         }

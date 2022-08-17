@@ -13,7 +13,7 @@ export class User {
   @Prop()
   bio: string;
 
-  @Prop({ required: true })
+  @Prop({ required: true, select: false })
   password: string;
 
   @Prop({ required: true })

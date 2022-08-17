@@ -9,7 +9,7 @@ const $axios=axios.create({
 
 $axios.interceptors.request.use((config)=>{
     const token=store.getState().auth.accessToken
-    console.log(store.getState())
+    console.log(token)
     if(token && config.headers){
         config.headers['authorization']=token
     }

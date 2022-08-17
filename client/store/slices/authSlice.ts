@@ -1,33 +1,10 @@
-import {createSlice, PayloadAction,createAsyncThunk} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import AuthSliceState from "../states/AuthSliceState";
-import LoginDto from "../../types/dto/Login.dto";
 import AuthDto from "../../types/dto/Auth.dto";
-import AuthService from "../../services/AuthService";
-import RegisterDto from "../../types/dto/Register.dto";
-import {AxiosError} from "axios";
 import {WritableDraft} from "immer/dist/types/types-external";
+import {LoginThunk,RegisterThunk} from "../thunks/auth/";
 
 const initialState:AuthSliceState={isAuth:false,user:null,accessToken:null,errorMessage:null,isError:false}
-
-export const loginThunk=createAsyncThunk('loginThunk',async (dto:LoginDto,{rejectWithValue})=>{
-    try{
-        const response=await AuthService.login(dto)
-        return response.data
-    }catch (e){
-        const data=(e as AxiosError)?.response?.data as Error
-        return rejectWithValue(data.message);
-    }
-})
-
-export const registerThunk=createAsyncThunk('registerThunk',async (dto:RegisterDto,{rejectWithValue})=>{
-    try{
-        const response=await AuthService.register(dto)
-        return response.data
-    }catch (e){
-        const data=(e as AxiosError)?.response?.data as Error
-        return rejectWithValue(data.message);
-    }
-})
 
 const loginFunc=(state:WritableDraft<AuthSliceState>,authDto:AuthDto)=>{
     resetErrorFunc(state);
@@ -62,16 +39,16 @@ const authSlice=createSlice({
     },
 
     extraReducers: (builder) => {
-        builder.addCase(loginThunk.fulfilled, (state,action)=>{
+        builder.addCase(LoginThunk.fulfilled, (state,action)=>{
             loginFunc(state,action.payload)
         })
-        builder.addCase(registerThunk.fulfilled, (state,action)=>{
+        builder.addCase(RegisterThunk.fulfilled, (state,action)=>{
             loginFunc(state,action.payload)
         })
-        builder.addCase(loginThunk.rejected, (state,action)=>{
+        builder.addCase(LoginThunk.rejected, (state,action)=>{
             setError(state,action.payload as string)
         })
-        builder.addCase(registerThunk.rejected, (state,action)=>{
+        builder.addCase(RegisterThunk.rejected, (state,action)=>{
             setError(state,action.payload as string)
         })
     }
