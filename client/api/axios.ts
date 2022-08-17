@@ -3,7 +3,8 @@ import store from "../store";
 import AuthService from "../services/AuthService";
 
 const $axios=axios.create({
-    baseURL:process.env.NEXT_PUBLIC_SERVER_URL
+    baseURL:process.env.NEXT_PUBLIC_SERVER_URL,
+    withCredentials:true
 })
 
 $axios.interceptors.request.use((config)=>{

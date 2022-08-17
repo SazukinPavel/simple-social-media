@@ -7,8 +7,9 @@ interface AuthorizedSectionProps{
 
 const AuthorizedSection:FC<AuthorizedSectionProps>=({user})=>{
     return (
-        <>
-        </>
+        <div>
+            <p>{user.username}</p>
+        </div>
     )
 }
 

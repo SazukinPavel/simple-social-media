@@ -16,10 +16,11 @@ export class SessionsService {
 
   async create({ user, refreshToken }: CreateSessionDto) {
     const session = await this.sessionModel.create({
-      user,
       refreshToken,
       expiresIn: new Date(Date.now() + 60 * 60 * 24 * 30 * 1000),
     });
+    session.user = user;
+    console.log(session);
     session.save();
     return session;
   }
@@ -27,6 +28,7 @@ export class SessionsService {
   async createOrUpdate(user: User) {
     const session = await this.sessionModel.findOne({ user });
     const refreshToken = this.jwtService.signRefreshToken(user._id);
+    console.log(user);
     if (session) {
       return this.update({
         sessionId: session._id.toString(),
@@ -49,7 +51,7 @@ export class SessionsService {
     return !!deletedSession;
   }
 
-  findById(id: string) {
-    return this.sessionModel.findById(id).populate(User.name);
+  findByRefreshToken(refreshToken: string) {
+    return this.sessionModel.findOne({ refreshToken }).populate('user');
   }
 }

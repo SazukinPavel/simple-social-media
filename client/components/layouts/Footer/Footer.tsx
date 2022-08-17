@@ -2,9 +2,9 @@ import styles from './Footer.module.scss'
 
 const Footer=()=>{
     return (
-        <div className={styles.Footer}>
+        <footer className={styles.Footer}>
             <p>All rights reserved.</p>
-        </div>
+        </footer>
     )
 }
 

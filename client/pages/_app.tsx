@@ -10,17 +10,6 @@ import {login} from "../store/slices/authSlice";
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-  const dispatch=useTypedDispatch()
-
-  useEffect(()=>{
-    async function tryAuth(){
-      const res=await AuthService.tryAuthorize()
-      dispatch(login(res.data))
-    }
-    tryAuth()
-
-  },[])
-
   return <Provider store={store}>
     <MyLayout>
       <Component></Component>

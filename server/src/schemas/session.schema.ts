@@ -1,8 +1,8 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types } from 'mongoose';
 import { User } from './user.schema';
+import * as mongoose from 'mongoose';
 
-export type SessionDocument = Session & Document;
+export type SessionDocument = Session & mongoose.Document;
 
 @Schema()
 export class Session {
@@ -12,7 +12,7 @@ export class Session {
   @Prop({ required: true })
   expiresIn: Date;
 
-  @Prop({ type: { type: Types.ObjectId, ref: User.name } })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: User.name })
   user: User;
 }
 

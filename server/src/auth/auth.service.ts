@@ -65,7 +65,11 @@ export class AuthService {
   }
 
   async getUserByRefreshToken(refreshToken: string) {
-    const user = this.jwtService.verifyRefreshToken(refreshToken);
+    if (!refreshToken) {
+      throw new ForbiddenException('Not authorized user');
+    }
+    const session = await this.sessionService.findByRefreshToken(refreshToken);
+    const user = session.user;
     if (!user) {
       throw new ForbiddenException('Not valid token');
     }
