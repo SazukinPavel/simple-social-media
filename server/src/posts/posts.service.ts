@@ -10,11 +10,11 @@ export class PostsService {
   constructor(@InjectModel(Post.name) private postModel: Model<Post>) {}
 
   findById(id: string) {
-    return this.postModel.findById(id).populate('user');
+    return this.postModel.findById(id).populate('owner');
   }
 
   getAll() {
-    return this.postModel.find().populate(User.name);
+    return this.postModel.find().populate('owner');
   }
 
   async create(dto: CreatePostDto, user: User) {

@@ -3,10 +3,7 @@ import type { AppProps } from 'next/app'
 import MyLayout from "../components/layouts/MyLayout";
 import {Provider} from 'react-redux';
 import store from "../store";
-import {useEffect} from "react";
-import AuthService from "../services/AuthService";
-import {useTypedDispatch} from "../hooks";
-import {login} from "../store/slices/authSlice";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
 

@@ -56,6 +56,11 @@ export class AuthService {
     return authResponse;
   }
 
+  async logout(res: Response) {
+    this.cookiesService.resetAuthCookies(res);
+    return true;
+  }
+
   async getUserByRefreshToken(refreshToken: string) {
     if (!refreshToken) {
       throw new ForbiddenException('Not authorized user');

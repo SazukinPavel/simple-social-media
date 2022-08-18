@@ -9,27 +9,29 @@ const $axios=axios.create({
 
 $axios.interceptors.request.use((config)=>{
     const token=store.getState().auth.accessToken
-    console.log(token)
     if(token && config.headers){
         config.headers['authorization']=token
     }
     return config
 })
 
+/*
 $axios.interceptors.response.use((config) => {
     return config;
 },async (error) => {
     const originalRequest = error.config;
-    if (error.response.status == 401 && error.config && !error.config._isRetry) {
+    console.log('start')
+    console.log(error.response.status == 403 && error.config && !originalRequest._isRetry)
+    if (error.response.status == 403 && error.config && !originalRequest._isRetry) {
         originalRequest._isRetry = true;
         try {
             const response = await AuthService.tryAuthorize()
+            console.log(response)
             store.dispatch({type:'auth/login',payload:response.data})
             return $axios.request(originalRequest);
         } catch (e) {}
     }
-    throw error;
 })
-
+ */
 
 export default $axios

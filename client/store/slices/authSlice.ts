@@ -3,14 +3,16 @@ import AuthSliceState from "../states/AuthSliceState";
 import AuthDto from "../../types/dto/Auth.dto";
 import {WritableDraft} from "immer/dist/types/types-external";
 import {LoginThunk,RegisterThunk} from "../thunks/auth/";
+import LogoutThunk from "../thunks/auth/LogoutThunk";
 
-const initialState:AuthSliceState={isAuth:false,user:null,accessToken:null,errorMessage:null,isError:false}
+const initialState:AuthSliceState={isAuth:false,user:null,accessToken:null,errorMessage:null,isError:false,isTryAuthorize:false}
 
 const loginFunc=(state:WritableDraft<AuthSliceState>,authDto:AuthDto)=>{
     resetErrorFunc(state);
     state.isAuth=true
     state.accessToken=authDto.accessToken
     state.user=authDto.user
+    state.isTryAuthorize=true
 }
 
 const resetErrorFunc=(state:WritableDraft<AuthSliceState>)=>{
@@ -21,6 +23,7 @@ const resetErrorFunc=(state:WritableDraft<AuthSliceState>)=>{
 const setError=(state:WritableDraft<AuthSliceState>,message?:string)=>{
     state.isError=true
     state.errorMessage=message ?? ''
+    state.isTryAuthorize=true
 }
 
 const authSlice=createSlice({
@@ -29,9 +32,6 @@ const authSlice=createSlice({
     reducers:{
         login(state,action:PayloadAction<AuthDto>){
             loginFunc(state,action.payload)
-        },
-        logout(state){
-            state=initialState
         },
         resetError(state){
             resetErrorFunc(state)
@@ -51,9 +51,14 @@ const authSlice=createSlice({
         builder.addCase(RegisterThunk.rejected, (state,action)=>{
             setError(state,action.payload as string)
         })
+        builder.addCase(LogoutThunk.fulfilled,state => {
+            resetErrorFunc(state)
+            state.isAuth=false
+            state.user=null
+        })
     }
 })
 
-export const {login,logout,resetError}=authSlice.actions
+export const {login,resetError}=authSlice.actions
 
 export const authReducer=authSlice.reducer

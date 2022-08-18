@@ -18,7 +18,7 @@ lerna-debug.log*
 /.nyc_output
 
 # IDEs and editors
-/.idea
+*/.idea
 .project
 .classpath
 .c9/
@@ -27,12 +27,12 @@ lerna-debug.log*
 *.sublime-workspace
 
 */node_modules
-/.pnp
-.pnp.js
+*/.pnp
+*.pnp.js
 
 # testing
-/coverage
+*/coverage
 
 # next.js
-/.next/
-/out/
+*/.next/
+*/out/

@@ -6,4 +6,5 @@ export default interface AuthSliceState{
     accessToken:string | null
     isError:boolean
     errorMessage:string | null
+    isTryAuthorize:boolean
 }

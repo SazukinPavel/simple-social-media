@@ -27,6 +27,11 @@ export class AuthController {
     return this.authService.authorize(user, res);
   }
 
+  @Post('logout')
+  logout(@Res({ passthrough: true }) res: Response) {
+    return this.authService.logout(res);
+  }
+
   @Post('access')
   async refreshAccessToken(
     @Cookies('token') refreshToken: string,

@@ -16,6 +16,10 @@ export default class AuthService{
     }
 
     static tryAuthorize(){
-        return $axios.post<AuthDto>(this.subPath+'access',null,{withCredentials:true})
+        return $axios.post<AuthDto>(this.subPath+'access',null,)
+    }
+
+    static logout(){
+        return $axios.post(this.subPath+'logout')
     }
 }

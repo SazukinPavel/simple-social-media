@@ -7,7 +7,7 @@ export default interface Post{
 
     likesCount: number;
 
-    owner: User;
+    owner?: User;
 
     _id:string
 }

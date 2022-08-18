@@ -3,20 +3,20 @@ import Title from "../../components/seo/Title";
 import {useForm} from "react-hook-form";
 import LoginDto from "../../types/dto/Login.dto";
 import styles from '../../styles/Login.module.scss'
-import {useTypedDispatch, useTypedSelector} from "../../hooks";
+import {useGoBack, useRedirect, useTypedDispatch, useTypedSelector} from "../../hooks";
 import {useEffect, useState} from "react";
-import {useRouter} from "next/router";
 import {Button, FormInput, LoadingButton} from "../../components/ui";
 import {LoginThunk} from "../../store/thunks/auth";
 import {resetError} from "../../store/slices/authSlice";
 
-const RegisterPage:NextPage=()=>{
+const LoginPage:NextPage=()=>{
 
     const {register,reset,formState,handleSubmit}=useForm<LoginDto>({mode:'onChange'})
     const [isLoading,setIsLoading]=useState(false)
     const {errorMessage,isError,isAuth}=useTypedSelector((state)=>state.auth)
-    const router = useRouter()
     const dispatch=useTypedDispatch()
+
+    useRedirect('/posts',isAuth)
 
     useEffect(()=>{
         return ()=>{
@@ -27,14 +27,10 @@ const RegisterPage:NextPage=()=>{
     const loginClick=async (dto:LoginDto)=>{
         setIsLoading(true)
         await dispatch(LoginThunk(dto))
-        if(isAuth){
-            router.push('/')
-        }
-        setTimeout(()=>{
-            setIsLoading(false)
-
-        },5000)
+        setIsLoading(false)
     }
+
+    const goBack=useGoBack()
 
     return(
         <div className={[styles.Login].join(' ')}>
@@ -63,7 +59,7 @@ const RegisterPage:NextPage=()=>{
                 />
                 <p>{isError && errorMessage}</p>
                 <div className={styles.buttons}>
-                    <Button>Back</Button>
+                    <Button type={"button"} onClick={goBack}>Back</Button>
                     <Button onClick={()=>reset()}>Reset</Button>
                     <LoadingButton isLoading={isLoading} type='submit'>Login</LoadingButton>
                 </div>
@@ -72,4 +68,4 @@ const RegisterPage:NextPage=()=>{
     )
 }
 
-export default RegisterPage;
+export default LoginPage;

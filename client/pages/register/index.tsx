@@ -4,9 +4,8 @@ import styles from "../../styles/Register.module.scss";
 import {useForm} from "react-hook-form";
 import RegisterDto from "../../types/dto/Register.dto";
 import {useEffect, useState} from "react";
-import {useTypedDispatch, useTypedSelector} from "../../hooks";
+import {useGoBack, useRedirect, useTypedDispatch, useTypedSelector} from "../../hooks";
 import {Button, FormInput, LoadingButton} from "../../components/ui";
-import {useRouter} from "next/router";
 import {RegisterThunk} from "../../store/thunks/auth/";
 import {resetError} from "../../store/slices/authSlice";
 
@@ -15,18 +14,15 @@ const Register:NextPage=()=>{
     const [isLoading,setIsLoading]=useState(false)
     const dispatch=useTypedDispatch()
     const {isAuth,isError,errorMessage}=useTypedSelector((state)=>state.auth)
-    const router=useRouter()
+    useRedirect('/posts',isAuth)
 
     const registerClick=async (dto:RegisterDto)=>{
         setIsLoading(true)
         await dispatch(RegisterThunk(dto))
-        if(isAuth){
-            router.push('/')
-        }
-        setTimeout(()=>{
-            setIsLoading(false)
-        },5000)
+        setIsLoading(false)
     }
+
+    const goBack=useGoBack()
 
     useEffect(()=>{
         return ()=>{
@@ -70,7 +66,7 @@ const Register:NextPage=()=>{
                 />
                 <p>{isError && errorMessage}</p>
                 <div className={styles.buttons}>
-                    <Button>Back</Button>
+                    <Button type={"button"}  onClick={goBack}>Back</Button>
                     <Button onClick={()=>reset()}>Reset</Button>
                     <LoadingButton isLoading={isLoading} type='submit'>Register</LoadingButton>
                 </div>
