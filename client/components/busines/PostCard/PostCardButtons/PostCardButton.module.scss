@@ -1,0 +1,15 @@
+.PostCardButtons{
+    margin: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    div{
+        span{
+            margin: 0.2rem auto auto;
+            text-align: center;
+            display: block;
+        }
+        svg{
+            font-size: 1.5rem;
+        }
+    }
+}

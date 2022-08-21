@@ -10,4 +10,10 @@ export default interface Post{
     owner?: User;
 
     _id:string
+
+    isLiked:boolean
+
+    isDisliked:boolean
+
+    dislikeCount:number
 }

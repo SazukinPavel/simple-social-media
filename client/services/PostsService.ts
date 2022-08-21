@@ -1,6 +1,7 @@
 import $axios from "../api/axios";
 import Post from "../types/Post";
 import AddPostDto from "../types/dto/AddPost.dto";
+import SetPostReviewDto from "../types/dto/SetPostReview.dto";
 
 export default class PostsService{
 
@@ -11,6 +12,14 @@ export default class PostsService{
     }
 
     static createPost(dto:AddPostDto){
-        return $axios.post<AddPostDto,Post>(this.subPath,dto)
+        return $axios.post(this.subPath,dto)
+    }
+
+    static setPostReview(dto:SetPostReviewDto){
+        return $axios.post(this.subPath,dto)
+    }
+
+    static deletePostReview(id:string){
+        return $axios.delete(this.subPath+'/'+id)
     }
 }

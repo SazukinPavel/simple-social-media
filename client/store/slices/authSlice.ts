@@ -35,6 +35,9 @@ const authSlice=createSlice({
         },
         resetError(state){
             resetErrorFunc(state)
+        },
+        setIsTryAuthorize(state){
+            state.isTryAuthorize=true
         }
     },
 
@@ -59,6 +62,6 @@ const authSlice=createSlice({
     }
 })
 
-export const {login,resetError}=authSlice.actions
+export const {login,resetError,setIsTryAuthorize}=authSlice.actions
 
 export const authReducer=authSlice.reducer

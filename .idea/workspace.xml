@@ -2,20 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9aa3f6-e6d9-441d-88e2-e9c9ec578941" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/hooks/useGoBack.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/hooks/useRedirect.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/middleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/pages/_document.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/thunks/auth/LogoutThunk.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/build-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development-fallback/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development-fallback/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development-fallback/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development-fallback/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development-fallback/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development-fallback/index.pack.old" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/PostCardButtons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/thunks/posts/DeletePostReviewThunk.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/thunks/posts/SetPostReviewThunk.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/types/PostReview.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/types/dto/SetPostReview.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/post-reviews/dto/CreatePostReview.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/post-reviews/dto/SetPostReview.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/post-reviews/dto/UpdatePostReview.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/posts/dto/PostResponse.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/schemas/post-review.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/0.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/10.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/11.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/12.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/13.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/14.pack" afterDir="false" />
@@ -35,13 +35,12 @@
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/index.pack.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/0.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/10.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/11.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/12.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/13.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/14.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/15.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/16.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/17.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/17.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/2.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/3.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/4.pack" afterDir="false" />
@@ -52,66 +51,39 @@
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/9.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/server/middleware-build-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/server/middleware-build-manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/server/middleware-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/server/middleware-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/server/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/server/pages-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/server/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/server/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/server/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/server/pages/_document.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/server/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/server/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/server/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/server/pages/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/server/pages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/server/pages/login.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/server/pages/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/server/pages/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/server/webpack-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/server/webpack-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/static/chunks/_error.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/static/chunks/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/static/chunks/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/chunks/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/static/chunks/pages/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/static/chunks/pages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/static/chunks/pages/login.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/static/chunks/pages/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/static/chunks/pages/posts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/static/chunks/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/static/chunks/webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/development/_buildManifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/static/development/_buildManifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/221900cef2d1ae3e.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/304a2e20020ac9bf.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/3c316c630f6f23c4.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/49e879378ac31a68.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/62d9d7b04535de3d.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/765fe98912016110.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/7fdf29856da3a532.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/838563a46af7d83d.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/ef022e1d0e3ff493.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/f6c9c6187d6341c3.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/pages/_app.221900cef2d1ae3e.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/pages/_app.62d9d7b04535de3d.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/pages/index.f6c9c6187d6341c3.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/pages/posts.221900cef2d1ae3e.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/webpack.221900cef2d1ae3e.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/webpack.304a2e20020ac9bf.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/webpack.3c316c630f6f23c4.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/webpack.49e879378ac31a68.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/webpack.62d9d7b04535de3d.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/webpack.765fe98912016110.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/webpack.7fdf29856da3a532.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/webpack.838563a46af7d83d.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/webpack.ef022e1d0e3ff493.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/webpack/webpack.f6c9c6187d6341c3.hot-update.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/trace" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/trace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/axios.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/AddPost/AddPost.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/AddPost/AddPost.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/AddPost/AddPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/AddPost/AddPost.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/Lenta/Lenta.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/Lenta/Lenta.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/hooks/useAuthorize.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useAuthorize.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/posts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/register/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/register/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/services/AuthService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/AuthService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/services/PostsService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/PostsService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/slices/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/authSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/states/AuthSliceState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/states/AuthSliceState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/AddPostThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/AddPostThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/types/Post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/Post.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/middlewares/auth.middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/middlewares/auth.middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/posts/posts.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/posts/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/schemas/post-like.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/PostCardButton.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/schemas/post.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/schemas/post.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/schemas/session.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/schemas/session.schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,22 +107,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network/client/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/paveloigen88/Рабочий стол/node/simple-social-network",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "/home/paveloigen88/Рабочий стол/node/simple-social-network/server/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -174,6 +146,11 @@
       <workItem from="1660811553200" duration="2451000" />
       <workItem from="1660825283822" duration="2516000" />
       <workItem from="1660836409129" duration="3557000" />
+      <workItem from="1660909372295" duration="365000" />
+      <workItem from="1660910120705" duration="1422000" />
+      <workItem from="1661010145343" duration="2539000" />
+      <workItem from="1661086911273" duration="3786000" />
+      <workItem from="1661101426417" duration="3697000" />
     </task>
     <servers />
   </component>

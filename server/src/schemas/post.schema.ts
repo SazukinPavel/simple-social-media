@@ -6,6 +6,8 @@ export type PostDocument = Post & mongoose.Document;
 
 @Schema()
 export class Post {
+  _id: string;
+
   @Prop()
   pictureName: string;
 
@@ -15,7 +17,14 @@ export class Post {
   @Prop({ default: 0 })
   likesCount: number;
 
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: User.name })
+  @Prop({ default: 0 })
+  dislikeCount: number;
+
+  @Prop({
+    required: true,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: User.name,
+  })
   owner: User;
 }
 

@@ -12,7 +12,7 @@ export class PostsController {
 
   @Get()
   getAll(@CurrentUser() user: User) {
-    return this.postsService.getAll();
+    return this.postsService.getAll(user);
   }
 
   @Get(':id')

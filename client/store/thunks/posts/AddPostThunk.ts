@@ -5,7 +5,7 @@ import PostsService from "../../../services/PostsService";
 export const addPost=createAsyncThunk('addPost',async (dto:AddPostDto)=>{
     try {
         const response=await PostsService.createPost(dto)
-        return response
+        return response.data
     }catch (e){}
 })
 

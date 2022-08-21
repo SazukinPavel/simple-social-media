@@ -7,6 +7,7 @@ import { UsersModule } from './users/users.module';
 import { SessionsModule } from './sessions/sessions.module';
 import { AuthMiddleware } from './middlewares/auth.middleware';
 import { JwtService } from './services';
+import { PostReviewsModule } from './post-reviews/post-reviews.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { JwtService } from './services';
     MongooseModule.forRoot(process.env.DATABASE_CONNECTION_STRING),
     UsersModule,
     SessionsModule,
+    PostReviewsModule,
   ],
   controllers: [],
   providers: [JwtService],

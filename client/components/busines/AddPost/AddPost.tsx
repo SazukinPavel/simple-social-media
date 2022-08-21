@@ -10,17 +10,18 @@ const AddPost=()=>{
 
     const dispatch=useTypedDispatch()
     const [isLoading,setLoading]=useState(false)
-    const {register,formState:{errors},handleSubmit}=useForm<AddPostDto>({mode:'onSubmit'})
+    const {register,reset,formState:{errors},handleSubmit}=useForm<AddPostDto>({mode:'onSubmit'})
 
     const sendPost=async (dto:AddPostDto)=>{
         setLoading(true);
         await dispatch(AddPostThunk(dto))
         setLoading(false)
+        reset()
     }
 
     return(
         <form className={styles.AddPost} onSubmit={handleSubmit(sendPost)}>
-            <input className={errors.text && styles.Bad} {...register('text',{required:true,maxLength:256})} placeholder={'Your text...'}/>
+            <input className={errors.text && styles.Bad} {...register('text',{required:true,maxLength:512})} placeholder={'Your text...'}/>
             <button type={"submit"}>{!isLoading?<SendOutlined size={50}/>:<LoadingOutlined />}</button>
         </form>
     )
