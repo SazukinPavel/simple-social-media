@@ -8,8 +8,14 @@
             text-align: center;
             display: block;
         }
-        svg{
-            font-size: 1.5rem;
+        button{
+            border: none;
+            background-color: inherit;
+            svg{
+                color: #2e97ff;
+                font-size: 1.5rem;
+            }
         }
+
     }
 }

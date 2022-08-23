@@ -17,9 +17,9 @@ export class SessionsService {
   async create({ user, refreshToken }: CreateSessionDto) {
     const session = await this.sessionModel.create({
       refreshToken,
+      user,
       expiresIn: new Date(Date.now() + 60 * 60 * 24 * 30 * 1000),
     });
-    session.user = user;
     session.save();
     return session;
   }

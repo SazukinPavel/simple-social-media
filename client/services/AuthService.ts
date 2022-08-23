@@ -1,7 +1,5 @@
-import LoginDto from "../types/dto/Login.dto";
-import RegisterDto from "../types/dto/Register.dto";
-import AuthDto from "../types/dto/Auth.dto";
 import $axios from "../api/axios";
+import {AuthDto, LoginDto, RegisterDto} from "../types/dto";
 
 export default class AuthService{
 

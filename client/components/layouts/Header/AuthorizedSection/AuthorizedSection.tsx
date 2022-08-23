@@ -1,7 +1,7 @@
 import {User} from "../../../../types/User";
 import {FC} from "react";
 import styles from './AuthorizedSection.module.scss'
-import {LogoutOutlined} from "@ant-design/icons";
+import {LogoutOutlined, UserOutlined} from "@ant-design/icons";
 import {useTypedDispatch} from "../../../../hooks";
 import LogoutThunk from "../../../../store/thunks/auth/LogoutThunk";
 
@@ -14,12 +14,15 @@ const AuthorizedSection:FC<AuthorizedSectionProps>=({user})=>{
     const dispatch=useTypedDispatch()
 
     const logoutClick=()=>{
-        dispatch(LogoutThunk(null))
+        dispatch(LogoutThunk())
     }
 
     return (
         <div className={styles.AuthorizedSection}>
             <p>{user.username}</p>
+            <button>
+                <UserOutlined/>
+            </button>
             <button onClick={logoutClick}>
                 <LogoutOutlined/>
             </button>

@@ -6,6 +6,7 @@ const fetchPosts=createAsyncThunk('fetchPosts',async (d, {rejectWithValue}) => {
         const response = await PostsService.fetchPosts()
         return response.data
     } catch (e) {
+        return rejectWithValue(e)
     }
 })
 

@@ -22,8 +22,8 @@ export class PostReviewsController {
     return this.postReviewsService.setPostReview(dto, user);
   }
 
-  @Delete(':id')
-  deletePostReview(@Param('id') id: string, @CurrentUser() user: User) {
-    return this.postReviewsService.deleteReview(id, user);
+  @Delete(':postId')
+  deletePostReview(@Param('postId') postId: string, @CurrentUser() user: User) {
+    return this.postReviewsService.deleteReview(postId, user);
   }
 }

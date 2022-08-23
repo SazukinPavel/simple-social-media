@@ -1,7 +1,7 @@
-import { IsBoolean, IsUUID } from 'class-validator';
+import { IsBoolean, IsString } from 'class-validator';
 
 export class SetPostReviewDto {
-  @IsUUID()
+  @IsString()
   postId: string;
   @IsBoolean()
   isPositive: boolean;

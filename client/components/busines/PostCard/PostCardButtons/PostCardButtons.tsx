@@ -34,13 +34,13 @@ const PostCardButtons:React.FC<PostCardButtons>=({_id,isLiked,isDisliked,likesCo
 
     return <div className={styles.PostCardButtons}>
         <div>
-            <button>
+            <button onClick={dislikePost}>
                 {isDisliked?<DislikeFilled/>:<DislikeOutlined />}
             </button>
             <span>{dislikeCount}</span>
         </div>
         <div>
-            <button>
+            <button onClick={likePost}>
                 {isLiked?<LikeFilled/>:<LikeOutlined />}
             </button>
             <span>{likesCount}</span>

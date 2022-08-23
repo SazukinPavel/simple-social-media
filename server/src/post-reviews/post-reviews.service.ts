@@ -11,6 +11,7 @@ import { PostsService } from '../posts/posts.service';
 import { SetPostReviewDto } from './dto/SetPostReview.dto';
 import { User } from '../schemas/user.schema';
 import { UpdatePostReviewDto } from './dto/UpdatePostReview.dto';
+import PostReviewResponseDto from './dto/PostReviewResponse.dto';
 
 @Injectable()
 export class PostReviewsService {
@@ -23,7 +24,7 @@ export class PostReviewsService {
     post,
     isPositive,
     owner,
-  }: CreatePostReviewDto) {
+  }: CreatePostReviewDto): Promise<PostReviewResponseDto> {
     const postReview = await this.postReviewsModel.create({
       owner,
       isPositive,
@@ -31,43 +32,54 @@ export class PostReviewsService {
     });
     await postReview.save();
     if (isPositive) {
-      this.postsService.updateLikesCount(post._id, post.likesCount + 1);
+      await this.postsService.updateLikesCount(post._id, post.likesCount + 1);
     } else {
-      this.postsService.updateDislikeCount(post._id, post.dislikeCount + 1);
+      await this.postsService.updateDislikeCount(
+        post._id,
+        post.dislikeCount + 1,
+      );
     }
-    return true;
+    return { isSet: true };
   }
 
   private async updatePostReview({
     isPositive,
     postReview,
-  }: UpdatePostReviewDto) {
+  }: UpdatePostReviewDto): Promise<PostReviewResponseDto> {
     if (isPositive === postReview.isPositive) {
-      return true;
+      return { isSet: false };
     }
     await this.postReviewsModel.findByIdAndUpdate(postReview._id, {
       isPositive,
     });
     if (isPositive) {
-      this.postsService.updateLikesCount(
-        postReview.post._id,
-        postReview.post.likesCount + 1,
-      );
-      this.postsService.updateDislikeCount(
-        postReview.post._id,
-        postReview.post.dislikeCount - 1,
-      );
+      this.resetLike(postReview);
     } else {
-      this.postsService.updateDislikeCount(
-        postReview.post._id,
-        postReview.post.dislikeCount + 1,
-      );
-      this.postsService.updateLikesCount(
-        postReview.post._id,
-        postReview.post.likesCount - 1,
-      );
+      this.resetDislikes(postReview);
     }
-    return true;
+    return { isSet: true };
+  }
+
+  private resetDislikes(postReview: PostReview) {
+    this.postsService.updateDislikeCount(
+      postReview.post._id,
+      postReview.post.dislikeCount + 1,
+    );
+    this.postsService.updateLikesCount(
+      postReview.post._id,
+      postReview.post.likesCount - 1,
+    );
+  }
+
+  private resetLike(postReview: PostReview) {
+    this.postsService.updateLikesCount(
+      postReview.post._id,
+      postReview.post.likesCount + 1,
+    );
+    this.postsService.updateDislikeCount(
+      postReview.post._id,
+      postReview.post.dislikeCount - 1,
+    );
   }
 
   async setPostReview(dto: SetPostReviewDto, user: User) {
@@ -75,21 +87,44 @@ export class PostReviewsService {
     if (!post) {
       throw new BadRequestException('This post was not found');
     }
-    const postReview = await this.postReviewsModel.findOne({
-      owner: user,
-      post,
-    });
+    const postReview = await this.findByUserAndPostId(user, post._id);
     if (postReview) {
       return this.updatePostReview({ isPositive: dto.isPositive, postReview });
     }
     return await this.createPostReview({ ...dto, post, owner: user });
   }
 
-  async deleteReview(id: string, user: User) {
-    const postReview = await this.postReviewsModel.findById(id);
-    if (user._id === postReview._id) {
-      this.postReviewsModel.findByIdAndDelete(id);
-      return true;
+  private findByUserAndPostId(user: User, postId: string) {
+    return this.postReviewsModel
+      .findOne({
+        post: postId,
+        user,
+      })
+      .populate('post');
+  }
+
+  async deleteReview(
+    postId: string,
+    user: User,
+  ): Promise<PostReviewResponseDto> {
+    const postReview = await this.findByUserAndPostId(user, postId);
+    if (!postReview) {
+      throw new BadRequestException('This like not exist!');
+    }
+    if (user._id.toString() === postReview.owner._id.toString()) {
+      if (postReview.isPositive) {
+        await this.postsService.updateLikesCount(
+          postReview.post._id,
+          postReview.post.likesCount - 1,
+        );
+      } else {
+        await this.postsService.updateDislikeCount(
+          postReview.post._id,
+          postReview.post.dislikeCount - 1,
+        );
+      }
+      await this.postReviewsModel.findByIdAndDelete(postReview._id);
+      return { isSet: true };
     }
     throw new ForbiddenException('You cannot delete someone else review');
   }

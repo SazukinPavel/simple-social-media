@@ -2,7 +2,7 @@ import PostsSliceState from "../states/PostsSliceState";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {AddPostThunk, FetchPosts} from "../thunks/posts/";
 import {DeletePostReviewThunk, SetPostReviewThunk} from "../thunks/posts";
-import {PostReview} from "../../types/PostReview";
+import {SetPostReviewDto} from "../../types/dto";
 
 const initialState:PostsSliceState={posts:[]}
 
@@ -10,6 +10,21 @@ const postsSlice=createSlice({
     name:'posts',
     initialState,
     reducers:{
+        setPostReview(state,{payload:{postId,isPositive}}:PayloadAction<SetPostReviewDto>){
+            state.posts.forEach((p)=>{
+                if(p._id===postId){
+                    if(isPositive){
+                        p.likesCount++;
+                        p.dislikeCount=p.isDisliked?p.dislikeCount-1:p.dislikeCount;
+                    }else {
+                        p.dislikeCount++;
+                        p.likesCount=p.isLiked?p.likesCount-1:p.likesCount;
+                    }
+                    p.isLiked=isPositive
+                    p.isDisliked=!isPositive
+                }
+            })
+        }
     },
     extraReducers:builder => {
         builder.addCase(FetchPosts.fulfilled,(state,action)=>{
@@ -20,23 +35,23 @@ const postsSlice=createSlice({
                 state.posts.push(action.payload)
             }
         })
-        builder.addCase(SetPostReviewThunk.fulfilled,(state,action:PayloadAction<PostReview>)=>{
-            state.posts.forEach((p)=>{
-                if(p._id===action.payload.post._id){
-                    p.isLiked=action.payload.isPositive
-                    p.isDisliked=!action.payload.isPositive
-                }
-            })
-        })
+        builder.addCase(SetPostReviewThunk.fulfilled,(state)=>{})
         builder.addCase(DeletePostReviewThunk.fulfilled,(state,action)=>{
             state.posts.forEach((p)=>{
                 if(p._id===action.payload){
-                    p.isLiked=false
-                    p.isDisliked=false
+                    if(p.isLiked){
+                        p.likesCount--;
+                        p.isLiked=false
+                    }else{
+                        p.dislikeCount--;
+                        p.isDisliked=false
+                    }
                 }
             })
         })
     }
 })
+
+export const {setPostReview}=postsSlice.actions
 
 export const postsReducer=postsSlice.reducer
