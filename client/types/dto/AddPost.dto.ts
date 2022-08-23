@@ -1,3 +1,4 @@
 export default interface AddPostDto{
-    text?:string
+    text:string
+    picture?:FileList
 }

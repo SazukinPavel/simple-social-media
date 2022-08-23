@@ -7,7 +7,7 @@ export const addPost=createAsyncThunk('addPost',async (dto:AddPostDto,{rejectWit
         const response=await PostsService.createPost(dto)
         return response.data
     }catch (e){
-        return rejectWithValue(e)
+        return rejectWithValue('Some error')
     }
 })
 

@@ -8,6 +8,9 @@ import { SessionsModule } from './sessions/sessions.module';
 import { AuthMiddleware } from './middlewares/auth.middleware';
 import { JwtService } from './services';
 import { PostReviewsModule } from './post-reviews/post-reviews.module';
+import { FilesModule } from './files/files.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -18,6 +21,10 @@ import { PostReviewsModule } from './post-reviews/post-reviews.module';
     UsersModule,
     SessionsModule,
     PostReviewsModule,
+    FilesModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, 'static'),
+    }),
   ],
   controllers: [],
   providers: [JwtService],

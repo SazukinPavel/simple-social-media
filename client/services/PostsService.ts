@@ -11,8 +11,13 @@ export default class PostsService{
         return $axios.get<Post[]>(this.subPath)
     }
 
-    static createPost(dto:AddPostDto){
-        return $axios.post(this.subPath,dto)
+    static createPost({picture,text}:AddPostDto){
+        const fd=new FormData()
+        fd.append('picture',picture[0])
+        fd.append('text',text)
+        return $axios.post(this.subPath,fd,{ headers: {
+                'Content-Type': 'multipart/form-data;'
+            }})
     }
 
     static setPostReview(dto:SetPostReviewDto){

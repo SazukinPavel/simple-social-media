@@ -1,5 +1,6 @@
 .AddPost{
   width: 100%;
+  display: flex;
   input{
     width: 80%;
     font-size: 1rem;
@@ -9,8 +10,18 @@
       border: 0.1rem red solid;
     }
   }
+  .File{
+    font-size: 1rem;
+    height: 1rem;
+    margin: auto;
+    input{
+      display: none;
+    }
+  }
+
   button{
     font-size: 1rem;
     background-color: white;
+    border: none;
   }
 }

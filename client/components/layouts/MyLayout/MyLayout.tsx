@@ -12,8 +12,6 @@ const MyLayout:NextPage<MyLayoutProps>=({children})=>{
 
     return (
         <div className={styles.wrapper}>
-            <Head>
-            </Head>
             <Header/>
             <main>
                 {children}

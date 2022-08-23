@@ -2,20 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9aa3f6-e6d9-441d-88e2-e9c9ec578941" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/types/dto/PostReviewResponse.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/types/dto/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/types/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/post-reviews/dto/PostReviewResponse.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/types/FileType.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/client/.env.local" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/build-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/0.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/10.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/11.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/12.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/13.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/14.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/15.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/16.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/17.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/17.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/18.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/18.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/2.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/3.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/4.pack" afterDir="false" />
@@ -28,6 +27,7 @@
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/index.pack.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/0.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/10.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/12.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/13.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/14.pack" afterDir="false" />
@@ -52,25 +52,21 @@
       <change beforePath="$PROJECT_DIR$/client/.next/static/chunks/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/static/chunks/webpack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/static/development/_buildManifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/static/development/_buildManifest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/trace" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/trace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/PostCardButton.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/PostCardButton.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/PostCardButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/PostCardButtons.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/services/AuthService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/AuthService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/AddPost/AddPost.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/AddPost/AddPost.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/AddPost/AddPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/AddPost/AddPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/MyLayout/MyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/MyLayout/MyLayout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/services/PostsService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/PostsService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/thunks/auth/LogoutThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/auth/LogoutThunk.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/thunks/auth/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/auth/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/AddPostThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/AddPostThunk.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/DeletePostReviewThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/DeletePostReviewThunk.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/FetchPostsThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/FetchPostsThunk.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/SetPostReviewThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/SetPostReviewThunk.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/post-reviews/dto/SetPostReview.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/post-reviews/dto/SetPostReview.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/post-reviews/post-reviews.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/post-reviews/post-reviews.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/post-reviews/post-reviews.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/post-reviews/post-reviews.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/dto/AddPost.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/dto/AddPost.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/posts/dto/CreatePost.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/dto/CreatePost.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/posts/posts.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/posts/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/sessions/sessions.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/sessions/sessions.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/server/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,22 +90,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network/server/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/paveloigen88/Рабочий стол/node/simple-social-network",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "/home/paveloigen88/Рабочий стол/node/simple-social-network/server/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -142,6 +138,11 @@
       <workItem from="1661172113665" duration="1104000" />
       <workItem from="1661179961617" duration="2337000" />
       <workItem from="1661193646070" duration="456000" />
+      <workItem from="1661245689317" duration="2709000" />
+      <workItem from="1661248764696" duration="314000" />
+      <workItem from="1661264004486" duration="2232000" />
+      <workItem from="1661266913878" duration="2059000" />
+      <workItem from="1661272018471" duration="2334000" />
     </task>
     <servers />
   </component>

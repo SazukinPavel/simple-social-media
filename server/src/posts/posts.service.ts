@@ -6,12 +6,15 @@ import { User } from '../schemas/user.schema';
 import { CreatePostDto } from './dto/CreatePost.dto';
 import { PostReview } from '../schemas/post-review.schema';
 import PostResponseDto from './dto/PostResponse.dto';
+import { FilesService } from '../files/files.service';
+import { FileType } from '../types/FileType';
 
 @Injectable()
 export class PostsService {
   constructor(
     @InjectModel(Post.name) private postModel: Model<Post>,
     @InjectModel(PostReview.name) private postReviewsModel: Model<PostReview>,
+    private fileService: FilesService,
   ) {}
 
   findById(id: string) {
@@ -60,7 +63,17 @@ export class PostsService {
   }
 
   async create(dto: CreatePostDto, user: User) {
+    let pictureName = '';
+    if (dto.picture) {
+      pictureName = await this.fileService.saveFile(
+        FileType.IMAGE,
+        dto.picture,
+      );
+    }
     const post = await this.postModel.create({ ...dto, owner: user });
+    if (pictureName) {
+      post.pictureName = pictureName;
+    }
     post.save();
     return post;
   }
