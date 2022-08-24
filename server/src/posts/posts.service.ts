@@ -8,6 +8,7 @@ import { PostReview } from '../schemas/post-review.schema';
 import PostResponseDto from './dto/PostResponse.dto';
 import { FilesService } from '../files/files.service';
 import { FileType } from '../types/FileType';
+import { UsersService } from '../users/users.service';
 
 @Injectable()
 export class PostsService {
@@ -15,10 +16,11 @@ export class PostsService {
     @InjectModel(Post.name) private postModel: Model<Post>,
     @InjectModel(PostReview.name) private postReviewsModel: Model<PostReview>,
     private fileService: FilesService,
+    private userService: UsersService,
   ) {}
 
   findById(id: string) {
-    return this.postModel.findById(id).populate('owner');
+    return this.postModel.findById(id).populate('owner').lean();
   }
 
   private getAll() {
@@ -26,8 +28,12 @@ export class PostsService {
   }
 
   async getPosts(user: User): Promise<PostResponseDto[]> {
-    const likedPost = (await this.getLikedPosts(user)) as PostReview[];
     const posts = (await this.getAll()) as Post[];
+    return this.constructPostResponse(posts, user);
+  }
+
+  private async constructPostResponse(posts: Post[], user: User) {
+    const likedPost = (await this.getLikedPosts(user)) as PostReview[];
     return posts.map((p) => {
       const postReview = likedPost.find((l) => {
         return l.post._id.toString() === p._id.toString();
@@ -76,5 +82,14 @@ export class PostsService {
     }
     post.save();
     return post;
+  }
+
+  async getUserPosts(userId: string) {
+    const user = await this.userService.findByIdOrThrowExeption(userId);
+    return this.constructPostResponse(await this.getPostsByUser(userId), user);
+  }
+
+  private getPostsByUser(userId: string) {
+    return this.postModel.find({ owner: userId }).populate('owner').lean();
   }
 }

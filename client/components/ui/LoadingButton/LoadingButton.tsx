@@ -8,7 +8,7 @@ interface LoadingButtonProps extends React.HTMLProps<HTMLButtonElement>{
 
 const LoadingButton:React.FC<LoadingButtonProps>=({isLoading,children,...props})=>{
     return(
-        <button className={[buttonStyles.Button,styles.Button].join(' ')}>
+        <button className={[buttonStyles.Button,styles.Button].join(' ')} {...props}>
             <div className={isLoading?styles.Centre:''}>
                 {isLoading && <div className={styles.Loading}></div>}
                 <span className={isLoading?styles.Hide:''}>{children}</span>

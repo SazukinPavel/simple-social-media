@@ -47,36 +47,38 @@ export class PostReviewsService {
     postReview,
   }: UpdatePostReviewDto): Promise<PostReviewResponseDto> {
     if (isPositive === postReview.isPositive) {
-      return { isSet: false };
+      throw new BadRequestException(
+        'Same post-review with same positive quality already exists',
+      );
     }
     await this.postReviewsModel.findByIdAndUpdate(postReview._id, {
       isPositive,
     });
     if (isPositive) {
-      this.resetLike(postReview);
+      await this.resetLike(postReview);
     } else {
-      this.resetDislikes(postReview);
+      await this.resetDislikes(postReview);
     }
     return { isSet: true };
   }
 
-  private resetDislikes(postReview: PostReview) {
-    this.postsService.updateDislikeCount(
+  private async resetDislikes(postReview: PostReview) {
+    await this.postsService.updateDislikeCount(
       postReview.post._id,
       postReview.post.dislikeCount + 1,
     );
-    this.postsService.updateLikesCount(
+    await this.postsService.updateLikesCount(
       postReview.post._id,
       postReview.post.likesCount - 1,
     );
   }
 
-  private resetLike(postReview: PostReview) {
-    this.postsService.updateLikesCount(
+  private async resetLike(postReview: PostReview) {
+    await this.postsService.updateLikesCount(
       postReview.post._id,
       postReview.post.likesCount + 1,
     );
-    this.postsService.updateDislikeCount(
+    await this.postsService.updateDislikeCount(
       postReview.post._id,
       postReview.post.dislikeCount - 1,
     );

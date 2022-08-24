@@ -5,6 +5,7 @@ import { Post, PostSchema } from '../schemas/post.schema';
 import { PostsController } from './posts.controller';
 import { PostReview, PostReviewSchema } from '../schemas/post-review.schema';
 import { FilesModule } from '../files/files.module';
+import { UsersModule } from '../users/users.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { FilesModule } from '../files/files.module';
       { name: PostReview.name, schema: PostReviewSchema },
     ]),
     FilesModule,
+    UsersModule,
   ],
   controllers: [PostsController],
   providers: [PostsService],

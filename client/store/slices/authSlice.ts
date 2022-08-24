@@ -4,6 +4,7 @@ import AuthDto from "../../types/dto/Auth.dto";
 import {WritableDraft} from "immer/dist/types/types-external";
 import {LoginThunk,RegisterThunk} from "../thunks/auth/";
 import LogoutThunk from "../thunks/auth/LogoutThunk";
+import {User} from "../../types";
 
 const initialState:AuthSliceState={isAuth:false,user:null,accessToken:null,errorMessage:null,isError:false,isTryAuthorize:false}
 
@@ -38,6 +39,9 @@ const authSlice=createSlice({
         },
         setIsTryAuthorize(state){
             state.isTryAuthorize=true
+        },
+        setUser(state,action:PayloadAction<User>){
+            state.user=action.payload
         }
     },
 
@@ -62,6 +66,6 @@ const authSlice=createSlice({
     }
 })
 
-export const {login,resetError,setIsTryAuthorize}=authSlice.actions
+export const {login,resetError,setIsTryAuthorize,setUser}=authSlice.actions
 
 export const authReducer=authSlice.reducer

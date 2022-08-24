@@ -5,9 +5,10 @@ import {setPostReview} from "../../slices/postsSlice";
 
 const SetPostReviewThunk=createAsyncThunk('setPostReviewThunk',async (dto:SetPostReviewDto, {rejectWithValue,dispatch}) => {
     try {
+        dispatch(setPostReview(dto))
         const response = await PostsService.setPostReview(dto)
-        if(response.data.isSet){
-            dispatch(setPostReview(dto))
+        if(!response.data.isSet){
+            dispatch(setPostReview({...dto,isPositive:!dto.isPositive}))
         }
     } catch (e) {
         return rejectWithValue(e)

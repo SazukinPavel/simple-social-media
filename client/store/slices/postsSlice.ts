@@ -3,6 +3,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {AddPostThunk, FetchPosts} from "../thunks/posts/";
 import {DeletePostReviewThunk, SetPostReviewThunk} from "../thunks/posts";
 import {SetPostReviewDto} from "../../types/dto";
+import FetchMyPosts from "../thunks/posts/FetchMyPosts";
 
 const initialState:PostsSliceState={posts:[]}
 
@@ -28,6 +29,9 @@ const postsSlice=createSlice({
     },
     extraReducers:builder => {
         builder.addCase(FetchPosts.fulfilled,(state,action)=>{
+            state.posts=action.payload ?? []
+        })
+        builder.addCase(FetchMyPosts.fulfilled,(state,action)=>{
             state.posts=action.payload ?? []
         })
         builder.addCase(AddPostThunk.fulfilled,(state,action)=>{

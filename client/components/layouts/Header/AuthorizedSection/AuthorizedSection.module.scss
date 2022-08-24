@@ -9,5 +9,14 @@
     color: white;
     border: none;
     margin: auto auto auto 1rem;
+    transition: 0.5s;
+    &:hover{
+      color: lightgray;
+    }
+  }
+  a{
+    font-size: 1.5rem;
+    color: white;
+    margin: auto auto auto 1rem;
   }
 }

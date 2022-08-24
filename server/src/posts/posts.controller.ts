@@ -25,6 +25,11 @@ export class PostsController {
     return this.postsService.getPosts(user);
   }
 
+  @Get('me')
+  getUserPosts(@CurrentUser() user) {
+    return this.postsService.getUserPosts(user._id);
+  }
+
   @Get(':id')
   findById(@Param('id') id: string) {
     return this.postsService.findById(id);

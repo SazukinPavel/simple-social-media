@@ -7,6 +7,14 @@ body {
   font-size: 28px;
 }
 
+input:focus {
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
 body{
   background-color: #95ccff;
 }
@@ -21,13 +29,19 @@ svg{
 }
 
 .center-container{
-  margin: 20vh 20vw;
-  margin-bottom: 0px;
-  padding: 2rem;
+  margin: 20vh 20vw 0px;
   background-color: #2e97ff;
 }
 
 #__next{
   min-height: 100vh;
   min-width: 100vw;
+}
+
+.center{
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  min-width: 50%;
+  min-height: 80vh;
 }
