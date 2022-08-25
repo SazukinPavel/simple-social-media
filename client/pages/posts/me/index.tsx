@@ -9,12 +9,14 @@ import {LoadingButton} from "../../../components/ui";
 import {UserAvatar} from "../../../components/busines";
 import UsersService from "../../../services/UsersService";
 import {setUser} from "../../../store/slices/authSlice";
+import {useForm} from "react-hook-form";
+import {UpdateUserDto} from "../../../types/dto";
 
 const Index=()=>{
 
     const dispatch=useTypedDispatch()
     const {isAuth,isTryAuthorize,user}=useTypedSelector(state => state.auth)
-    const [bio,setBio]=React.useState(user?.bio)
+    const {register,reset,handleSubmit}=useForm<UpdateUserDto>({mode:'onSubmit'})
     useAuthorize()
     useRedirect('/login',!isAuth, isTryAuthorize)
     React.useEffect(()=>{
@@ -23,25 +25,25 @@ const Index=()=>{
         }
     },[isAuth])
 
-    const saveBio=async ()=>{
-        const newUser=await UsersService.updateUser({bio:bio??''})
+    const saveBio=async (dto:UpdateUserDto)=>{
+        const newUser=await UsersService.updateUser(dto)
         dispatch(setUser(newUser.data))
-    }
-
-    const bioChange=(e:any)=>{
-        setBio(e.target?.value ??'')
+        reset()
     }
 
     return(
         <div className={['center',styles.Me].join(' ')}>
             <Title title={'My profile'}/>
-            <UserAvatar user={user}/>
+            <label htmlFor="avatarImageInput">
+                <UserAvatar user={user}/>
+            </label>
+            <input {...register('avatarPicture',{})} className={styles.AvatarImageInput} type="file" id='avatarImageInput'/>
             <div className={styles.Bio}>
                 <label>
                     About me:
-                    <textarea onChange={bioChange} maxLength={512} placeholder={'Write something...'} value={user?.bio ?? ''}/>
+                    <textarea {...register('bio',{value:user?.bio ?? '',maxLength:512})}  placeholder={'Write something...'}/>
                     <div className={styles.Save}>
-                        <LoadingButton onClick={saveBio} isLoading={false}>
+                        <LoadingButton onClick={handleSubmit(saveBio)} isLoading={false}>
                             Save
                             <SaveOutlined/>
                         </LoadingButton>

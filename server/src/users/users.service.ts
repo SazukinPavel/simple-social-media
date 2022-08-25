@@ -6,12 +6,15 @@ import { CryptService } from '../services/crypt.service';
 import { Model } from 'mongoose';
 import { LoginDto } from '../auth/dto/Login.dto';
 import { UpdateUserDto } from './dto/UpdateUser.dto';
+import { FilesService } from '../files/files.service';
+import { FileType } from '../types/FileType';
 
 @Injectable()
 export class UsersService {
   constructor(
     @InjectModel(User.name) private userModel: Model<User>,
     private cryptService: CryptService,
+    private fileService: FilesService,
   ) {}
 
   async addUser(dto: AddUserDto) {
@@ -37,9 +40,21 @@ export class UsersService {
     return this.userModel.findOne({ email });
   }
 
-  async updateUser(dto: UpdateUserDto, user: User) {
-    await this.userModel.findByIdAndUpdate(user._id, { bio: dto.bio });
-    user.bio = dto.bio;
+  async updateUser({ avatarImage, bio }: UpdateUserDto, user: User) {
+    if (avatarImage) {
+      const avatarPicturePath = await this.fileService.saveFile(
+        FileType.IMAGE,
+        avatarImage,
+      );
+      await this.userModel.findByIdAndUpdate(user._id, {
+        bio,
+        avatarPicture: avatarPicturePath,
+      });
+      user.avatarPicture = avatarPicturePath;
+    } else {
+      await this.userModel.findByIdAndUpdate(user._id, { bio });
+    }
+    user.bio = bio;
     return user;
   }
 

@@ -23,7 +23,7 @@ export default class PostsService{
         fd.append('text',text)
         return $axios.post(this.subPath,fd,{ headers: {
                 'Content-Type': 'multipart/form-data;'
-            }})
+        }})
     }
 
     static setPostReview(dto:SetPostReviewDto){

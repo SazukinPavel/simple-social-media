@@ -6,7 +6,14 @@ export default class UsersService{
 
     static subPath='users/'
 
-    static updateUser(dto:UpdateUserDto){
-        return $axios.put<User>(this.subPath,dto)
+    static updateUser({avatarPicture,bio}:UpdateUserDto){
+        const fd=new FormData()
+        if(avatarPicture){
+            fd.append('avatarPicture',avatarPicture[0])
+        }
+        fd.append('bio',bio)
+        return $axios.put<User>(this.subPath,fd,{headers: {
+                'Content-Type': 'multipart/form-data;'
+        }})
     }
 }
