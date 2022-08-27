@@ -3,28 +3,28 @@ import Title from "../../components/seo/Title";
 import styles from "../../styles/Register.module.scss";
 import {useForm} from "react-hook-form";
 import RegisterDto from "../../types/dto/Register.dto";
-import {useEffect, useState} from "react";
-import {useGoBack, useRedirect, useTypedDispatch, useTypedSelector} from "../../hooks";
+import {useGoBack, useLoading, useRedirect, useTypedDispatch, useTypedSelector} from "../../hooks";
 import {Button, FormInput, LoadingButton} from "../../components/ui";
 import {RegisterThunk} from "../../store/thunks/auth/";
 import {resetError} from "../../store/slices/authSlice";
+import React from "react";
 
 const Register:NextPage=()=>{
     const {formState,reset,handleSubmit,register}=useForm<RegisterDto>({mode:'onChange'})
-    const [isLoading,setIsLoading]=useState(false)
+    const [regLoading,setRegLoading]=useLoading()
     const dispatch=useTypedDispatch()
     const {isAuth,isError,errorMessage}=useTypedSelector((state)=>state.auth)
     useRedirect('/posts',isAuth)
 
     const registerClick=async (dto:RegisterDto)=>{
-        setIsLoading(true)
+        setRegLoading()
         await dispatch(RegisterThunk(dto))
-        setIsLoading(false)
+        setRegLoading()
     }
 
     const goBack=useGoBack()
 
-    useEffect(()=>{
+    React.useEffect(()=>{
         return ()=>{
             dispatch(resetError())
         }
@@ -68,7 +68,7 @@ const Register:NextPage=()=>{
                 <div className={styles.buttons}>
                     <Button type={"button"}  onClick={goBack}>Back</Button>
                     <Button onClick={()=>reset()}>Reset</Button>
-                    <LoadingButton isLoading={isLoading} type='submit'>Register</LoadingButton>
+                    <LoadingButton isLoading={regLoading} type='submit'>Register</LoadingButton>
                 </div>
             </form>
         </div>

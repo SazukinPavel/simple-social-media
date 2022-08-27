@@ -3,31 +3,31 @@ import Title from "../../components/seo/Title";
 import {useForm} from "react-hook-form";
 import LoginDto from "../../types/dto/Login.dto";
 import styles from '../../styles/Login.module.scss'
-import {useGoBack, useRedirect, useTypedDispatch, useTypedSelector} from "../../hooks";
-import {useEffect, useState} from "react";
+import {useGoBack, useLoading, useRedirect, useTypedDispatch, useTypedSelector} from "../../hooks";
 import {Button, FormInput, LoadingButton} from "../../components/ui";
 import {LoginThunk} from "../../store/thunks/auth";
 import {resetError} from "../../store/slices/authSlice";
+import React from "react";
 
 const LoginPage:NextPage=()=>{
 
     const {register,reset,formState,handleSubmit}=useForm<LoginDto>({mode:'onChange'})
-    const [isLoading,setIsLoading]=useState(false)
     const {errorMessage,isError,isAuth}=useTypedSelector((state)=>state.auth)
+    const [loginLoading,switchLoginLoading]=useLoading()
     const dispatch=useTypedDispatch()
 
     useRedirect('/posts',isAuth)
 
-    useEffect(()=>{
+    React.useEffect(()=>{
         return ()=>{
             dispatch(resetError())
         }
     },[])
 
     const loginClick=async (dto:LoginDto)=>{
-        setIsLoading(true)
+        switchLoginLoading()
         await dispatch(LoginThunk(dto))
-        setIsLoading(false)
+        switchLoginLoading()
     }
 
     const goBack=useGoBack()
@@ -61,7 +61,7 @@ const LoginPage:NextPage=()=>{
                 <div className={styles.buttons}>
                     <Button type={"button"} onClick={goBack}>Back</Button>
                     <Button onClick={()=>reset()}>Reset</Button>
-                    <LoadingButton isLoading={isLoading} type='submit'>Login</LoadingButton>
+                    <LoadingButton isLoading={loginLoading} type='submit'>Login</LoadingButton>
                 </div>
             </form>
         </div>

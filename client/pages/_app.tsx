@@ -3,7 +3,6 @@ import type { AppProps } from 'next/app'
 import MyLayout from "../components/layouts/MyLayout";
 import {Provider} from 'react-redux';
 import store from "../store";
-import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
 

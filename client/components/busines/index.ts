@@ -1,9 +1,11 @@
 import PostCard from "./PostCard";
-import Lenta from "./Lenta";
 import UserAvatar from "./UserAvatar";
+import PostList from "./PostList";
+import Lenta from "./Lenta";
 
 export {
     PostCard,
-    Lenta,
-    UserAvatar
+    UserAvatar,
+    PostList,
+    Lenta
 }

@@ -4,6 +4,7 @@ import {
   Get,
   Param,
   Post,
+  Query,
   UploadedFiles,
   UseGuards,
   UseInterceptors,
@@ -16,12 +17,15 @@ import { CreatePostDto } from './dto/CreatePost.dto';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
 
 @Controller('posts')
-@UseGuards(AuthGuard)
 export class PostsController {
   constructor(private postsService: PostsService) {}
 
   @Get()
-  getAll(@CurrentUser() user: User) {
+  getAll(@CurrentUser() user: User, @Query('user') userId: string) {
+    console.log(userId);
+    if (userId) {
+      return this.postsService.getUserPosts(userId);
+    }
     return this.postsService.getPosts(user);
   }
 
@@ -45,7 +49,7 @@ export class PostsController {
     @Body() dto: CreatePostDto,
     @CurrentUser() user: User,
   ) {
-    if(files.picture && files.picture[0]){
+    if (files.picture && files.picture[0]) {
       dto.picture = files.picture[0];
     }
     return this.postsService.create(dto, user);

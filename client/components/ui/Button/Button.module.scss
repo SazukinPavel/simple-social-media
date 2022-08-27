@@ -1,14 +1,27 @@
 .Button{
-  color: #2e97ff;
-  background-color: white;
-  border: 0.1rem solid lightgray;
   font-size: 1rem;
   border-radius: 0.3rem;
   padding: 0.5rem;
   margin: 1rem 0.5rem;
   transition: all 0.5s;
-  &:hover,:focus{
-    background-color: lightgrey;
-    color: #7caad3;
+
+  &.blue{
+    color: #2e97ff;
+    background-color: white;
+    border: 0.1rem solid lightgray;
+    &:hover,:focus{
+      background-color: lightgrey;
+      color: #7caad3;
+    }
+  }
+
+  &.black{
+    color: black;
+    background-color: white;
+    border: 0.1rem solid black;
+    &:hover,:focus{
+      background-color: #eae8e8;
+      color: black;
+    }
   }
 }

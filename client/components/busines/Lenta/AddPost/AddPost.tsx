@@ -24,7 +24,7 @@ const AddPost=()=>{
             <input className={errors.text && styles.Bad} {...register('text',{required:true,maxLength:512})} placeholder={'Your text...'}/>
             <label className={styles.File} htmlFor="file-upload">
                 <PaperClipOutlined/>
-                <input id="file-upload" accept="image/png, image/jpeg" type='file' {...register('picture',{})}/>
+                <input id="file-upload" accept="image/png, image/jpeg, image/JPEG" type='file' {...register('picture',{})}/>
             </label>
             <button type={"submit"}>{!isLoading?<SendOutlined />:<LoadingOutlined />}</button>
         </form>

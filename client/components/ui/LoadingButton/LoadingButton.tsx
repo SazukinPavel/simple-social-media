@@ -1,19 +1,20 @@
 import React from "react";
 import styles from './LoadingButton.module.scss'
-import buttonStyles from '../Button/Button.module.scss'
+import {Button} from "../index";
+import {ButtonProps} from "../Button/Button";
 
-interface LoadingButtonProps extends React.HTMLProps<HTMLButtonElement>{
+interface LoadingButtonProps extends ButtonProps{
     isLoading:boolean
 }
 
 const LoadingButton:React.FC<LoadingButtonProps>=({isLoading,children,...props})=>{
     return(
-        <button className={[buttonStyles.Button,styles.Button].join(' ')} {...props}>
-            <div className={isLoading?styles.Centre:''}>
+        <Button{...props}>
+            <div className={[isLoading?styles.Centre:'',styles.LoadingButton].join(' ')}>
                 {isLoading && <div className={styles.Loading}></div>}
                 <span className={isLoading?styles.Hide:''}>{children}</span>
             </div>
-        </button>
+        </Button>
     )
 }
 

@@ -1,9 +1,14 @@
 import PostsSliceState from "../states/PostsSliceState";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {AddPostThunk, FetchPosts} from "../thunks/posts/";
-import {DeletePostReviewThunk, SetPostReviewThunk} from "../thunks/posts";
 import {SetPostReviewDto} from "../../types/dto";
-import FetchMyPosts from "../thunks/posts/FetchMyPosts";
+import {
+    AddPostThunk,
+    DeletePostReviewThunk,
+    FetchMyPosts,
+    FetchPosts,
+    FetchUserPosts,
+    SetPostReviewThunk
+} from "../thunks/posts";
 
 const initialState:PostsSliceState={posts:[]}
 
@@ -32,6 +37,9 @@ const postsSlice=createSlice({
             state.posts=action.payload ?? []
         })
         builder.addCase(FetchMyPosts.fulfilled,(state,action)=>{
+            state.posts=action.payload ?? []
+        })
+        builder.addCase(FetchUserPosts.fulfilled,(state,action)=>{
             state.posts=action.payload ?? []
         })
         builder.addCase(AddPostThunk.fulfilled,(state,action)=>{

@@ -1,4 +1,4 @@
-import Lenta from "../../components/busines/Lenta";
+import {Lenta} from "../../components/busines/";
 import React from "react";
 import {useAuthorize, useRedirect, useTypedDispatch, useTypedSelector} from "../../hooks";
 import {FetchPosts} from "../../store/thunks/posts";

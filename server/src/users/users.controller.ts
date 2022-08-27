@@ -2,7 +2,6 @@ import {
   Body,
   Controller,
   Put,
-  UploadedFile,
   UploadedFiles,
   UseGuards,
   UseInterceptors,
@@ -12,10 +11,7 @@ import { UpdateUserDto } from './dto/UpdateUser.dto';
 import { UsersService } from './users.service';
 import { CurrentUser } from '../decorators/user.decorator';
 import { User } from '../schemas/user.schema';
-import {
-  FileFieldsInterceptor,
-  FileInterceptor,
-} from '@nestjs/platform-express';
+import { FileFieldsInterceptor } from '@nestjs/platform-express';
 
 @Controller('users')
 @UseGuards(AuthGuard)

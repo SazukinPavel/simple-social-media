@@ -1,7 +1,7 @@
 import {useTypedSelector} from "../../../hooks";
-import PostCard from "../PostCard";
 import AddPost from "./AddPost";
 import styles from './Lenta.module.scss'
+import {PostList} from "../index";
 
 const Lenta=()=>{
 
@@ -10,7 +10,7 @@ const Lenta=()=>{
     return(
         <div className={[styles.Lenta].join('')}>
             <AddPost/>
-            {posts.map((p)=><PostCard key={p._id}{...p}/>)}
+            <PostList posts={posts}/>
         </div>
     )
 }

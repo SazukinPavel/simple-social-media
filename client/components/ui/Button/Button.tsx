@@ -1,13 +1,14 @@
 import React from "react";
 import styles from './Button.module.scss'
 
-interface ButtonProps extends  React.HTMLProps<HTMLButtonElement>{
-
+export interface ButtonProps extends  React.HTMLProps<HTMLButtonElement>{
+    styleType?:'blue' | 'black'
 }
 
-const Button:React.FC<ButtonProps>=({children,...props})=>{
+const Button:React.FC<ButtonProps>=({children,styleType='blue',...props})=>{
+    console.log(styleType)
     return(
-        <button className={styles.Button} {...props} >{children}</button>
+        <button className={[styles.Button,styles[styleType]].join(' ')} {...props} >{children}</button>
     )
 }
 

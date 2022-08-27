@@ -1,12 +1,11 @@
 import React from "react";
-import {useAuthorize, useRedirect, useTypedDispatch, useTypedSelector} from "../../../hooks";
+import {useAuthorize, useLoading, useRedirect, useTypedDispatch, useTypedSelector} from "../../../hooks";
 import {FetchMyPosts} from "../../../store/thunks/posts/";
 import Title from "../../../components/seo/Title";
-import Lenta from "../../../components/busines/Lenta";
 import styles from '../../../styles/Me.module.scss'
 import {SaveOutlined} from "@ant-design/icons";
 import {LoadingButton} from "../../../components/ui";
-import {UserAvatar} from "../../../components/busines";
+import {UserAvatar,Lenta} from "../../../components/busines";
 import UsersService from "../../../services/UsersService";
 import {setUser} from "../../../store/slices/authSlice";
 import {useForm} from "react-hook-form";
@@ -17,6 +16,7 @@ const Index=()=>{
     const dispatch=useTypedDispatch()
     const {isAuth,isTryAuthorize,user}=useTypedSelector(state => state.auth)
     const {register,reset,handleSubmit}=useForm<UpdateUserDto>({mode:'onSubmit'})
+    const [saveLoading,switchSaveLoading]=useLoading()
     useAuthorize()
     useRedirect('/login',!isAuth, isTryAuthorize)
     React.useEffect(()=>{
@@ -26,8 +26,10 @@ const Index=()=>{
     },[isAuth])
 
     const saveBio=async (dto:UpdateUserDto)=>{
+        switchSaveLoading()
         const newUser=await UsersService.updateUser(dto)
         dispatch(setUser(newUser.data))
+        switchSaveLoading()
         reset()
     }
 
@@ -43,7 +45,7 @@ const Index=()=>{
                     About me:
                     <textarea {...register('bio',{value:user?.bio ?? '',maxLength:512})}  placeholder={'Write something...'}/>
                     <div className={styles.Save}>
-                        <LoadingButton onClick={handleSubmit(saveBio)} isLoading={false}>
+                        <LoadingButton styleType={'black'} onClick={handleSubmit(saveBio)} isLoading={saveLoading}>
                             Save
                             <SaveOutlined/>
                         </LoadingButton>

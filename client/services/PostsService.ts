@@ -26,6 +26,11 @@ export default class PostsService{
         }})
     }
 
+    static fetchUserPosts(userId:string){
+        console.log(userId)
+        return $axios.get('posts',{params:{user:userId}})
+    }
+
     static setPostReview(dto:SetPostReviewDto){
         return $axios.post<PostReviewResponseDto>(this.subPathPostReview,dto)
     }
