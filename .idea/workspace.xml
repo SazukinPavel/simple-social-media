@@ -2,52 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9aa3f6-e6d9-441d-88e2-e9c9ec578941" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/PostCardAvatar.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/PostCardAvatar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/services/ImageService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/services/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/build-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/client/.env.local" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/10.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/15.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/16.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/17.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/17.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/18.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/18.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/2.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/3.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/4.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/5.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/8.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/6.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/7.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/client-development/index.pack.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/0.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/1.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/13.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/14.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/16.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/17.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/17.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/12.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/3.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/4.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/5.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/7.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/8.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/9.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/cache/webpack/server-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/server/middleware-build-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/server/middleware-build-manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/server/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/server/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/server/pages/posts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/chunks/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/static/chunks/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/chunks/pages/posts.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/static/chunks/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/static/chunks/webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.next/static/development/_buildManifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/static/development/_buildManifest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.next/trace" beforeDir="false" afterPath="$PROJECT_DIR$/client/.next/trace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/posts/me/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/me/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/services/PostsService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/PostsService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/services/UsersService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/UsersService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/Me.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/Me.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/Post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/Post.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/types/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/types/dto/UpdateUser.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/dto/UpdateUser.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/schemas/user.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/schemas/user.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/users/dto/UpdateUser.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/users/dto/UpdateUser.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/posts/dto/CreatePost.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/dto/CreatePost.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/posts/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/users/users.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/users/users.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/users/users.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/users/users.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,22 +64,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/paveloigen88/Рабочий стол/node/simple-social-network",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/home/paveloigen88/Рабочий стол/node/simple-social-network/server/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network/client/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/components/busines/Lenta" />
@@ -134,6 +127,8 @@
       <workItem from="1661436226701" duration="1043000" />
       <workItem from="1661437666175" duration="329000" />
       <workItem from="1661443965893" duration="1170000" />
+      <workItem from="1661507841436" duration="45000" />
+      <workItem from="1661597481272" duration="1343000" />
     </task>
     <servers />
   </component>

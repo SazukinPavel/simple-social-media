@@ -2,14 +2,17 @@ import React from "react";
 import Post from "../../../types/Post";
 import styles from './PostCard.module.scss'
 import PostCardButtons from "./PostCardButtons";
+import {ImageService} from "../../../services";
+import PostCardAvatar from "./PostCardAvatar";
 
 const PostCard:React.FC<Post>=(props)=>{
     return(
         <div className={styles.PostCard}>
+            <PostCardAvatar user={props.owner}/>
             {
                 props.pictureName &&
                 <div className={styles.ImageDiv}>
-                    <img src={process.env.NEXT_PUBLIC_STATIC_URL+props.pictureName}/>
+                    <img src={ImageService.getImage(props.pictureName)}/>
                 </div>
             }
             <p>

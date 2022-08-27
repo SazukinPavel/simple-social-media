@@ -34,7 +34,9 @@ export class UsersController {
       avatarPicture?: Express.Multer.File[];
     },
   ) {
-    dto.avatarImage = files.avatarPicture[0];
+    if (files.avatarPicture && files.avatarPicture[0]) {
+      dto.avatarImage = files.avatarPicture[0];
+    }
     return this.usersService.updateUser(dto, user);
   }
 }

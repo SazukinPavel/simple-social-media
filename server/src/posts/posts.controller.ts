@@ -45,7 +45,9 @@ export class PostsController {
     @Body() dto: CreatePostDto,
     @CurrentUser() user: User,
   ) {
-    dto.picture = files.picture[0];
+    if(files.picture && files.picture[0]){
+      dto.picture = files.picture[0];
+    }
     return this.postsService.create(dto, user);
   }
 }

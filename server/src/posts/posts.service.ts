@@ -70,7 +70,7 @@ export class PostsService {
 
   async create(dto: CreatePostDto, user: User) {
     let pictureName = '';
-    if (dto.picture) {
+    if (dto.picture.toString()!=='undefined') {
       pictureName = await this.fileService.saveFile(
         FileType.IMAGE,
         dto.picture,
