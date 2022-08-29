@@ -8,6 +8,9 @@ const userPageSlice=createSlice({
     name:'userPage',
     initialState,
     reducers:{
+        resetUser(state){
+            state.user=undefined
+        }
     },
     extraReducers:builder => {
         builder.addCase(GetUserThunk.fulfilled,(state, action)=>{
@@ -19,5 +22,7 @@ const userPageSlice=createSlice({
         })
     }
 })
+
+export const {resetUser}=userPageSlice.actions
 
 export const userPageReducer=userPageSlice.reducer

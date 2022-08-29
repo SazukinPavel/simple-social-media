@@ -27,7 +27,6 @@ export default class PostsService{
     }
 
     static fetchUserPosts(userId:string){
-        console.log(userId)
         return $axios.get('posts',{params:{user:userId}})
     }
 
@@ -37,5 +36,9 @@ export default class PostsService{
 
     static deletePostReview(id:string){
         return $axios.delete<PostReviewResponseDto>(this.subPathPostReview+'/'+id)
+    }
+
+    static findById(postId:string){
+        return $axios.get<Post>(this.subPath+postId)
     }
 }

@@ -2,35 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9aa3f6-e6d9-441d-88e2-e9c9ec578941" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/components/busines/UserCard/UserBio/UserBio.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/busines/UserCard/UserBio/UserBio.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/busines/UserCard/UserBio/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/busines/UserCard/UserCard.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/busines/UserCard/UserCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/busines/UserCard/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/slices/userPageSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/states/UserPageSliceState.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/thunks/userPage/GetUserThunk.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/thunks/userPage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pages/posts/[id]/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/slices/postPageSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/states/PostPageSliceState.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/thunks/postPage/GetPostThunk.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/thunks/postPage/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/PostCardButton.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/PostCardButton.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/layouts/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Footer/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/LoadingButton/LoadingButton.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/LoadingButton/LoadingButton.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/LoadingButton/LoadingButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/LoadingButton/LoadingButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/users/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/users/[id]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/services/UsersService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/UsersService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/services/PostsService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/PostsService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/slices/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/authSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/thunks/auth/LoginThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/auth/LoginThunk.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/thunks/auth/LogoutThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/auth/LogoutThunk.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/AddPostThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/AddPostThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/slices/userPageSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/userPageSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/Me.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/Me.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/Posts.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/Posts.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/schemas/post.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/schemas/post.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/schemas/user.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/schemas/user.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/users/users.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/users/users.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,8 +51,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.standard": "",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/home/paveloigen88/Рабочий стол/node/simple-social-network/server/node_modules/typescript/lib",
+    "ts.external.directory.path": "/home/paveloigen88/Рабочий стол/node/simple-social-network/client/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -124,6 +111,7 @@
       <workItem from="1661613368581" duration="2669000" />
       <workItem from="1661617621480" duration="1628000" />
       <workItem from="1661775812592" duration="4121000" />
+      <workItem from="1661787225539" duration="2833000" />
     </task>
     <servers />
   </component>

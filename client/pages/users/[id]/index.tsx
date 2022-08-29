@@ -5,10 +5,11 @@ import {FetchUserPosts} from "../../../store/thunks/posts";
 import {PostList, UserCard} from "../../../components/busines";
 import Title from "../../../components/seo/Title";
 import {GetUserThunk} from "../../../store/thunks/userPage";
+import {resetUser} from "../../../store/slices/userPageSlice";
 
 
 const UserPage=()=>{
-    const {posts:{posts},userPage:{user,isUserNotExist}}=useTypedSelector(state => state)
+    const {posts:{posts},userPage:{user,isUserNotExist},auth:{user:loginUser}}=useTypedSelector(state => state)
     const dispatch=useTypedDispatch()
     const {query:{id:userId}}=useRouter()
     React.useEffect(()=>{
@@ -17,9 +18,13 @@ const UserPage=()=>{
             dispatch(GetUserThunk(id))
             dispatch(FetchUserPosts(id))
         }
+        return ()=>{
+            dispatch(resetUser())
+        }
     },[userId])
 
-    useRedirect('/posts',isUserNotExist)
+    useRedirect('/',isUserNotExist)
+    useRedirect('/posts/me',user?._id===loginUser?._id || !userId)
 
     if(!user){
         return <div>
