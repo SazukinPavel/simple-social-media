@@ -16,7 +16,7 @@ textarea:focus {
 }
 
 body{
-  background-color: #95ccff;
+  background-color: white;
 }
 
 a{
@@ -41,6 +41,8 @@ svg{
 .center{
   background-color: white;
   width: 50%;
+  border-left: 0.4rem solid #2e97ff;
+  border-right: 0.4rem solid #2e97ff;
   margin: 0 auto;
   min-width: 50%;
   min-height: 80vh;

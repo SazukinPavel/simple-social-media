@@ -2,8 +2,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import AuthSliceState from "../states/AuthSliceState";
 import AuthDto from "../../types/dto/Auth.dto";
 import {WritableDraft} from "immer/dist/types/types-external";
-import {LoginThunk,RegisterThunk} from "../thunks/auth/";
-import LogoutThunk from "../thunks/auth/LogoutThunk";
+import {LoginThunk,RegisterThunk,LogoutThunk} from "../thunks/auth/";
 import {User} from "../../types";
 
 const initialState:AuthSliceState={isAuth:false,user:null,accessToken:null,errorMessage:null,isError:false,isTryAuthorize:false}

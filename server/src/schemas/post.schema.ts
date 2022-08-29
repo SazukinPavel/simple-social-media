@@ -23,7 +23,7 @@ export class Post {
   @Prop({
     required: true,
     type: mongoose.Schema.Types.ObjectId,
-    ref: User.name,
+    ref: 'User',
   })
   owner: User;
 }

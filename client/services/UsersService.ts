@@ -16,4 +16,8 @@ export default class UsersService{
                 'Content-Type': 'multipart/form-data;'
         }})
     }
+
+    static getUserById(id:string){
+        return $axios.get<User>(this.subPath+id)
+    }
 }

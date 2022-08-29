@@ -30,6 +30,7 @@ export class PostsController {
   }
 
   @Get('me')
+  @UseGuards(AuthGuard)
   getUserPosts(@CurrentUser() user) {
     return this.postsService.getUserPosts(user._id);
   }

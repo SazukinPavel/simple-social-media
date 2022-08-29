@@ -6,7 +6,6 @@ export interface ButtonProps extends  React.HTMLProps<HTMLButtonElement>{
 }
 
 const Button:React.FC<ButtonProps>=({children,styleType='blue',...props})=>{
-    console.log(styleType)
     return(
         <button className={[styles.Button,styles[styleType]].join(' ')} {...props} >{children}</button>
     )

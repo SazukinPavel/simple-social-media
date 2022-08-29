@@ -28,6 +28,10 @@ export class UsersService {
     return this.userModel.findById(id);
   }
 
+  findUserByIdWithPosts(id: string) {
+    return this.userModel.findById(id).populate('posts');
+  }
+
   async findByIdOrThrowExeption(id: string) {
     const user = await this.findUserById(id);
     if (!user) {

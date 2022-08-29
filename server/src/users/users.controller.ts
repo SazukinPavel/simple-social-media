@@ -1,6 +1,9 @@
 import {
   Body,
   Controller,
+  Get,
+  HttpException,
+  Param,
   Put,
   UploadedFiles,
   UseGuards,
@@ -34,5 +37,10 @@ export class UsersController {
       dto.avatarImage = files.avatarPicture[0];
     }
     return this.usersService.updateUser(dto, user);
+  }
+
+  @Get(':id')
+  getUserById(@Param('id') id: string) {
+    return this.usersService.findUserById(id);
   }
 }

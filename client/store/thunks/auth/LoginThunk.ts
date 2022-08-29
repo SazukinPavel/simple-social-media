@@ -3,7 +3,7 @@ import LoginDto from "../../../types/dto/Login.dto";
 import AuthService from "../../../services/AuthService";
 import {AxiosError} from "axios";
 
-export const loginThunk=createAsyncThunk('loginThunk',async (dto:LoginDto,{rejectWithValue})=>{
+const loginThunk=createAsyncThunk('loginThunk',async (dto:LoginDto,{rejectWithValue})=>{
     try{
         const response=await AuthService.login(dto)
         return response.data
