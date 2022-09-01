@@ -3,9 +3,9 @@ export default class ImageService{
         if(imageName){
             return process.env.NEXT_PUBLIC_STATIC_URL + imageName
         }
-        return process.env.NEXT_PUBLIC_BASE_AVATAR
+        return process.env.NEXT_PUBLIC_BASE_AVATAR as string
     }
-    static getImage(imageName:string){
+    static getImage(imageName:string ){
         return  process.env.NEXT_PUBLIC_STATIC_URL+imageName
     }
 }

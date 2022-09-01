@@ -9,7 +9,6 @@ const PostsPage=()=>{
 
     const dispatch=useTypedDispatch()
     const {isAuth,isTryAuthorize}=useTypedSelector(state => state.auth)
-    useAuthorize()
     useRedirect('/login',!isAuth, isTryAuthorize)
     React.useEffect(()=>{
         if(isAuth){

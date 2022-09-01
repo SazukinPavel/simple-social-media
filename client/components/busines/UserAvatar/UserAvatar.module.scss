@@ -1,12 +1,13 @@
 .UserAvatar{
   .Avatar {
+    width: 10rem;
+    height: 10rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     img {
-      display: block;
-      height: 10rem;
-      width: 10rem;
-      margin-left: auto;
-      margin-right: auto;
       border-radius: 50%;
+
     }
   }
 

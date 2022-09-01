@@ -17,7 +17,6 @@ const Index=()=>{
     const {isAuth,isTryAuthorize,user}=useTypedSelector(state => state.auth)
     const {register,reset,handleSubmit}=useForm<UpdateUserDto>({mode:'onSubmit'})
     const [saveLoading,switchSaveLoading]=useLoading()
-    useAuthorize()
     useRedirect('/login',!isAuth, isTryAuthorize)
     React.useEffect(()=>{
         if(isAuth){

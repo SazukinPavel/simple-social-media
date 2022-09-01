@@ -1,12 +1,12 @@
 .PostCard{
   margin: 1rem 5rem;
   .ImageDiv{
+    display: block;
+    width: 100%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
     img{
-      display: block;
-      width: 100%;
-      height: 100%;
-      margin-left: auto;
-      margin-right: auto;
       border-radius: 5%;
     }
   }
