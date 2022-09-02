@@ -1,36 +1,38 @@
-import {useRouter} from "next/router";
 import React from "react";
-import {useRedirect, useTypedDispatch, useTypedSelector} from "../../../hooks";
+import {useTypedDispatch, useTypedSelector} from "../../../hooks";
 import {FetchUserPosts} from "../../../store/thunks/posts";
 import {PostList, UserCard} from "../../../components/busines";
 import Title from "../../../components/seo/Title";
-import {GetUserThunk} from "../../../store/thunks/userPage";
 import {GetServerSideProps, NextPage} from "next";
 import {UsersService} from "../../../services";
 import {User} from "../../../types";
-import {setUserPageUser} from "../../../store/slices/userPageSlice";
+import {resetUser, setUserPageUser} from "../../../store/slices/userPageSlice";
+import {useRouter} from "next/router";
 
 interface UserPageProps{
-    serverSideUser:User
+    userProps:User
 }
 
-const UserPage:NextPage<UserPageProps>=({serverSideUser})=>{
-    const {posts:{posts},userPage:{user},auth:{user:loginUser}}=useTypedSelector(state => state)
+const UserPage:NextPage<UserPageProps>=({userProps})=>{
+    const {posts:{posts},userPage:{user},auth:{user:loginedUser}}=useTypedSelector(state => state)
+    const router=useRouter()
     const dispatch=useTypedDispatch()
-    const {query:{id:userId}}=useRouter()
 
     React.useEffect(()=>{
-        console.log(serverSideUser)
-        const id=userId as string
-        if(serverSideUser){
-            dispatch(setUserPageUser(serverSideUser))
+        if(!userProps){
             return
         }
-        if(id){
-            dispatch(GetUserThunk(id))
-            dispatch(FetchUserPosts(id))
+        if(loginedUser?._id===userProps._id){
+            router.push('/posts/me')
         }
-    },[])
+        if(userProps){
+            dispatch(setUserPageUser(userProps))
+            dispatch(FetchUserPosts(user?._id as string))
+        }
+        return ()=>{
+            dispatch(resetUser())
+        }
+    },[userProps])
 
 
     if(!user){
@@ -53,16 +55,15 @@ const UserPage:NextPage<UserPageProps>=({serverSideUser})=>{
 export const getServerSideProps: GetServerSideProps = async (context) => {
    try {
        const id=context.params?.id as string
-       console.log(id)
        const user=(await UsersService.getUserById(id)).data
-       console.log(user)
        if(!user){
-           throw new Error()
+           return {
+               notFound:true
+           }
        }
-       console.log('1')
        return{
            props:{
-               serverSideUser: user
+               userProps: user
            }
        }
    }catch(e){

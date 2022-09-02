@@ -3,7 +3,7 @@ import UserPageSliceState from "../states/UserPageSliceState";
 import {GetUserThunk} from "../thunks/userPage";
 import {User} from "../../types";
 
-const initialState:UserPageSliceState={user:undefined,isUserNotExist:false}
+const initialState:UserPageSliceState={user:undefined}
 
 const userPageSlice=createSlice({
     name:'userPage',
@@ -18,11 +18,7 @@ const userPageSlice=createSlice({
     },
     extraReducers:builder => {
         builder.addCase(GetUserThunk.fulfilled,(state, action)=>{
-            state.isUserNotExist=false
             state.user=action.payload
-        })
-        builder.addCase(GetUserThunk.rejected,(state)=>{
-            state.isUserNotExist=true
         })
     }
 })

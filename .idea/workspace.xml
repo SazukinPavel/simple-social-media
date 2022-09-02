@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9aa3f6-e6d9-441d-88e2-e9c9ec578941" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/pages/404.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/styles/404.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/PostCardAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/PostCardAvatar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/seo/Title/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/seo/Title/Title.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/posts/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/[id]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/posts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/posts/me/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/me/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/register/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/register/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/users/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/users/[id]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/slices/postPageSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/postPageSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/slices/userPageSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/userPageSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/FetchUserPosts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/FetchUserPosts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/Home.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/users/users.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/states/PostPageSliceState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/states/PostPageSliceState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/states/UserPageSliceState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/states/UserPageSliceState.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,23 +36,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network/client/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/paveloigen88/Рабочий стол/node/simple-social-network",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "/home/paveloigen88/Рабочий стол/node/simple-social-network/server/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/components/busines" />
@@ -119,6 +111,7 @@
       <workItem from="1662049626443" duration="4122000" />
       <workItem from="1662126708322" duration="924000" />
       <workItem from="1662132294637" duration="4087000" />
+      <workItem from="1662147386466" duration="2083000" />
     </task>
     <servers />
   </component>

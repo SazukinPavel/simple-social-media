@@ -1,27 +1,31 @@
-import {useRouter} from "next/router";
 import React from "react";
-import {useRedirect, useTypedDispatch, useTypedSelector} from "../../../hooks";
-import {GetPostThunk} from "../../../store/thunks/postPage";
+import {useTypedDispatch, useTypedSelector} from "../../../hooks";
 import {PostCard} from "../../../components/busines";
 import Title from "../../../components/seo/Title";
+import {GetServerSideProps, NextPage} from "next";
+import {PostsService} from "../../../services";
+import {Post} from "../../../types";
+import {setPostPage} from "../../../store/slices/postPageSlice";
+import {addPostToPosts} from "../../../store/slices/postsSlice";
 
-const PostPage=()=>{
+interface PostPageProps{
+    post:Post
+}
 
-    const {query:{id}}=useRouter()
+const PostPage:NextPage<PostPageProps>=({post})=>{
+
     const dispatch=useTypedDispatch()
-    const {post,isPostNotExist}=useTypedSelector(state=>state.postPage)
+    const {post:storePost}=useTypedSelector(state=>state.postPage)
 
     React.useEffect(()=>{
-        const postId=id as string
-        if(postId){
-            dispatch(GetPostThunk(postId))
+        if(!post){
+            return
         }
-    },[])
+        dispatch(setPostPage(post))
+        dispatch(addPostToPosts(post))
+    },[post])
 
-
-    useRedirect('/',isPostNotExist || !id)
-
-    if(!post){
+    if(!storePost){
         return <div>
             <Title>Loading...</Title>
         </div>
@@ -36,5 +40,28 @@ const PostPage=()=>{
         </>
     )
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    try {
+        const id=context.params?.id as string
+        const post=(await PostsService.findById(id)).data
+        if(!post){
+            return {
+                notFound:true
+            }
+        }
+        return{
+            props:{
+                post
+            }
+        }
+    }catch(e){
+        return {
+            notFound:true
+        }
+    }
+}
+
+
 
 export default  PostPage

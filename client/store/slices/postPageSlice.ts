@@ -1,8 +1,9 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {PostPageSliceState} from "../states/PostPageSliceState";
 import {GetPostThunk} from "../thunks/postPage";
+import {Post} from "../../types";
 
-const initialState:PostPageSliceState={post:undefined,isPostNotExist:false}
+const initialState:PostPageSliceState={post:undefined}
 
 
 const postPageSlice=createSlice({
@@ -11,19 +12,18 @@ const postPageSlice=createSlice({
     reducers:{
         resetPost(state){
          state.post=undefined
+        },
+        setPostPage(state,action:PayloadAction<Post>){
+          state.post=action.payload
         }
     },
     extraReducers: (builder) => {
         builder.addCase(GetPostThunk.fulfilled,(state,action)=>{
-            state.isPostNotExist=false
             state.post=action.payload
-        })
-        builder.addCase(GetPostThunk.rejected,(state)=>{
-            state.isPostNotExist=true
         })
     }
 })
 
-export const {resetPost}=postPageSlice.actions
+export const {resetPost,setPostPage}=postPageSlice.actions
 
 export const postPageReducer=postPageSlice.reducer

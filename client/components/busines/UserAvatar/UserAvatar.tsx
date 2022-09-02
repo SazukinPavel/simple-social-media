@@ -14,7 +14,7 @@ const UserAvatar:FC<UserAvatarProps>=({user})=>{
             <div className={styles.Avatar}>
                 <Image loader={()=>ImageService.getAvatar(user?.avatarPicture)}
                        src={ImageService.getAvatar(user?.avatarPicture)}
-                       width="100%" height="100%" layout="responsive"
+                       width="100%" height="100%" layout="responsive" unoptimized={true}
                 />
             </div>
             <h3>{user?.username}</h3>

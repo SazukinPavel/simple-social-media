@@ -9,7 +9,7 @@ import {
     FetchUserPosts,
     SetPostReviewThunk
 } from "../thunks/posts";
-import {User} from "../../types";
+import {Post, User} from "../../types";
 
 const initialState:PostsSliceState={posts:[]}
 
@@ -19,6 +19,9 @@ const postsSlice=createSlice({
     reducers:{
         setNewUserForAllPosts(state,action:PayloadAction<User>){
             state.posts=state.posts.map((p)=>({...p,owner:action.payload}))
+        },
+        addPostToPosts(state,action:PayloadAction<Post>){
+            state.posts.push(action.payload)
         },
         setPostReview(state,{payload:{postId,isPositive}}:PayloadAction<SetPostReviewDto>){
             state.posts.forEach((p)=>{
@@ -68,6 +71,6 @@ const postsSlice=createSlice({
     }
 })
 
-export const {setPostReview,setNewUserForAllPosts}=postsSlice.actions
+export const {setPostReview,setNewUserForAllPosts,addPostToPosts}=postsSlice.actions
 
 export const postsReducer=postsSlice.reducer
