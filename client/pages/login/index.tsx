@@ -33,38 +33,40 @@ const LoginPage:NextPage=()=>{
     const goBack=useGoBack()
 
     return(
-        <div className={[styles.Login].join(' ')}>
-            <Title title={'Login'}/>
-            <h1>Please fill out the form</h1>
-            <form onSubmit={handleSubmit(loginClick)}>
-                <FormInput
-                    registerFunc={()=>register('emailOrName',{
-                        required:'Username or email is required field',
-                        maxLength:{value:25,message:'Maximum length 25 characters'}})}
-                    text={'Username or email:'}
-                    placeholder={'Enter your name or email'}
-                    isError={!!formState.errors.emailOrName}
-                    errorMessage={formState.errors.emailOrName?.message}
-                />
-                <FormInput
-                    type={'password'}
-                    registerFunc={()=>register('password',{
-                        required:'Password is required field',
-                        minLength:{value:8,message:'Minimum password length 8 characters'},
-                        maxLength:{value:25,message:'Maximum password length 25 characters'}})}
-                    text={'Password:'}
-                    placeholder={'Enter your password'}
-                    isError={!!formState.errors.password}
-                    errorMessage={formState.errors.password?.message}
-                />
-                <p>{isError && errorMessage}</p>
-                <div className={styles.buttons}>
-                    <Button type={"button"} onClick={goBack}>Back</Button>
-                    <Button onClick={()=>reset()}>Reset</Button>
-                    <LoadingButton isLoading={loginLoading} type='submit'>Login</LoadingButton>
-                </div>
-            </form>
-        </div>
+        <>
+            <Title>Login</Title>
+            <div className={[styles.Login].join(' ')}>
+                <h1>Please fill out the form</h1>
+                <form onSubmit={handleSubmit(loginClick)}>
+                    <FormInput
+                        registerFunc={()=>register('emailOrName',{
+                            required:'Username or email is required field',
+                            maxLength:{value:25,message:'Maximum length 25 characters'}})}
+                        text={'Username or email:'}
+                        placeholder={'Enter your name or email'}
+                        isError={!!formState.errors.emailOrName}
+                        errorMessage={formState.errors.emailOrName?.message}
+                    />
+                    <FormInput
+                        type={'password'}
+                        registerFunc={()=>register('password',{
+                            required:'Password is required field',
+                            minLength:{value:8,message:'Minimum password length 8 characters'},
+                            maxLength:{value:25,message:'Maximum password length 25 characters'}})}
+                        text={'Password:'}
+                        placeholder={'Enter your password'}
+                        isError={!!formState.errors.password}
+                        errorMessage={formState.errors.password?.message}
+                    />
+                    <p>{isError && errorMessage}</p>
+                    <div className={styles.buttons}>
+                        <Button type={"button"} onClick={goBack}>Back</Button>
+                        <Button onClick={()=>reset()}>Reset</Button>
+                        <LoadingButton isLoading={loginLoading} type='submit'>Login</LoadingButton>
+                    </div>
+                </form>
+            </div>
+        </>
     )
 }
 

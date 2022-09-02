@@ -2,20 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9aa3f6-e6d9-441d-88e2-e9c9ec578941" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/pages/404.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/styles/404.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/client/.env.local" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/PostCardAvatar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/PostCardAvatar.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/PostCardAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/PostCardAvatar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/layouts/MyLayout/MyLayout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/MyLayout/MyLayout.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/layouts/MyLayout/MyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/MyLayout/MyLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/seo/Title/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/seo/Title/Title.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/posts/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/[id]/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/posts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/posts/me/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/me/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/services/ImageService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/ImageService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/register/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/register/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/users/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/users/[id]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/slices/userPageSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/userPageSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/FetchUserPosts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/FetchUserPosts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/Home.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/users/users.controller.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +117,8 @@
       <workItem from="1661775812592" duration="4121000" />
       <workItem from="1661787225539" duration="2833000" />
       <workItem from="1662049626443" duration="4122000" />
+      <workItem from="1662126708322" duration="924000" />
+      <workItem from="1662132294637" duration="4087000" />
     </task>
     <servers />
   </component>

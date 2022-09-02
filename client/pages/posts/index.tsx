@@ -17,10 +17,12 @@ const PostsPage=()=>{
     },[isAuth])
 
     return(
-        <div className={['center',styles.Posts].join(' ')}>
-            <Title title={'Posts'}/>
-            <Lenta/>
-        </div>
+        <>
+            <Title>Posts</Title>
+            <div className={['center',styles.Posts].join(' ')}>
+                <Lenta/>
+            </div>
+        </>
     )
 }
 

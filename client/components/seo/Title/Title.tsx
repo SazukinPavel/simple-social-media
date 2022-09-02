@@ -1,14 +1,14 @@
 import Head from "next/head";
-import {FC} from "react";
+import React from "react";
 
 interface TitleProps{
-    title:string
+    children:React.ReactNode
 }
 
-const Title:FC<TitleProps>=({title})=>{
+const Title:React.FC<TitleProps>=({children})=>{
     return(
         <Head>
-            <title>{title} | Simple Social Media</title>
+            <title>{children} | Simple Social Media</title>
         </Head>
     )
 }

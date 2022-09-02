@@ -3,6 +3,7 @@ import React from "react";
 import {useRedirect, useTypedDispatch, useTypedSelector} from "../../../hooks";
 import {GetPostThunk} from "../../../store/thunks/postPage";
 import {PostCard} from "../../../components/busines";
+import Title from "../../../components/seo/Title";
 
 const PostPage=()=>{
 
@@ -21,13 +22,18 @@ const PostPage=()=>{
     useRedirect('/',isPostNotExist || !id)
 
     if(!post){
-        return <div></div>
+        return <div>
+            <Title>Loading...</Title>
+        </div>
     }
 
     return(
-        <div className={'center'}>
-            <PostCard {...post}/>
-        </div>
+        <>
+            <Title>{post.text.slice(0,10)}</Title>
+            <div className={'center'}>
+                <PostCard {...post}/>
+            </div>
+        </>
     )
 }
 

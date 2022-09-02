@@ -13,7 +13,7 @@ const PostCard:React.FC<Post>=(props)=>{
             {
                 props.pictureName!==undefined &&
                 <div className={styles.ImageDiv}>
-                    <Image loader={()=>ImageService.getImage(props.pictureName ?? '')} src={ImageService.getImage(props.pictureName)} width="100%" height="80%" layout="responsive"/>
+                    <Image unoptimized={true} loader={()=>ImageService.getImage(props.pictureName ?? '')} src={ImageService.getImage(props.pictureName)} width="100%" height="80%" layout="responsive"/>
                 </div>
             }
             <p>

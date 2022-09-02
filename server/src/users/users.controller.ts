@@ -17,7 +17,6 @@ import { User } from '../schemas/user.schema';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
 
 @Controller('users')
-@UseGuards(AuthGuard)
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
@@ -25,6 +24,7 @@ export class UsersController {
   @UseInterceptors(
     FileFieldsInterceptor([{ name: 'avatarPicture', maxCount: 1 }]),
   )
+  @UseGuards(AuthGuard)
   updateUser(
     @Body() dto: UpdateUserDto,
     @CurrentUser() user: User,

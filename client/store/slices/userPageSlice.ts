@@ -1,6 +1,7 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {Action, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import UserPageSliceState from "../states/UserPageSliceState";
 import {GetUserThunk} from "../thunks/userPage";
+import {User} from "../../types";
 
 const initialState:UserPageSliceState={user:undefined,isUserNotExist:false}
 
@@ -10,6 +11,9 @@ const userPageSlice=createSlice({
     reducers:{
         resetUser(state){
             state.user=undefined
+        },
+        setUserPageUser(state,action:PayloadAction<User>){
+            state.user=action.payload
         }
     },
     extraReducers:builder => {
@@ -23,6 +27,6 @@ const userPageSlice=createSlice({
     }
 })
 
-export const {resetUser}=userPageSlice.actions
+export const {resetUser,setUserPageUser}=userPageSlice.actions
 
 export const userPageReducer=userPageSlice.reducer

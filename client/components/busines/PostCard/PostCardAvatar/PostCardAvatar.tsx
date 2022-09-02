@@ -20,7 +20,7 @@ const PostCardAvatar:React.FC<PostCardAvatarProps>=({user})=>{
     return(
         <div onClick={goToUser} className={styles.PostCardAvatar}>
             <div className={styles.AvatarContainer}>
-                <Image loader={()=>ImageService.getAvatar(user.avatarPicture)} src={ImageService.getAvatar(user.avatarPicture)} width="100%" height="100%" layout="responsive" />
+                <Image unoptimized={true} loader={()=>ImageService.getAvatar(user.avatarPicture)} src={ImageService.getAvatar(user.avatarPicture)} width="100%" height="100%" layout="responsive" />
             </div>
             <p>{user.username}</p>
         </div>
