@@ -1,0 +1,29 @@
+.More{
+  z-index: 1;
+  .MoreButton{
+    font-size: 1.5rem;
+    background-color: inherit;
+    border:none;
+  }
+
+  .MoreMenu{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -3rem;
+    right: 0rem;
+    width: 6rem;
+    transition: all 1s;
+    span{
+      display: block;
+      cursor: pointer;
+      margin: 0 auto;
+      white-space: nowrap;
+      width: 100%;
+      border: none;
+      font-size: 0.8rem;
+      &:hover{background-color: #e3dcdc;
+      }
+    }
+  }
+}

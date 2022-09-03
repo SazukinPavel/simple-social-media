@@ -2,17 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9aa3f6-e6d9-441d-88e2-e9c9ec578941" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/ui/PopUpMenu/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/hooks/useLogickTogle.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/PostCardAvatar.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/PostCardAvatar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/PostCardButton.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardFooter/PostCardFooter.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/PostCardButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardFooter/PostCardFooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardFooter/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/seo/Title/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/seo/Title/Title.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/posts/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/[id]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/users/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/users/[id]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/slices/postPageSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/postPageSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/slices/userPageSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/userPageSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/states/PostPageSliceState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/states/PostPageSliceState.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/states/UserPageSliceState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/states/UserPageSliceState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/useLoading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useLoading.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +121,8 @@
       <workItem from="1662126708322" duration="924000" />
       <workItem from="1662132294637" duration="4087000" />
       <workItem from="1662147386466" duration="2083000" />
+      <workItem from="1662224402275" duration="2436000" />
+      <workItem from="1662230506062" duration="2725000" />
     </task>
     <servers />
   </component>

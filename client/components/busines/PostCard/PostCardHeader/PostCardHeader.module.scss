@@ -1,0 +1,25 @@
+.PostCardAvatar{
+  display: flex;
+  .Avatar{
+    width: 90%;
+    display: flex;
+    .AvatarContainer{
+      width: 2rem;
+      height: 2rem;
+      img{
+        border-radius: 50%;
+      }
+    }
+    margin: 1rem 0;
+    p{
+      margin: auto 0 auto 1rem;
+      font-weight: 1000;
+    }
+  }
+  .PostCardMenu{
+    margin: auto;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+

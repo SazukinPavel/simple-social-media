@@ -1,15 +1,15 @@
 import React from "react";
 import Post from "../../../types/Post";
 import styles from './PostCard.module.scss'
-import PostCardButtons from "./PostCardButtons";
+import PostCardButtons from "./PostCardFooter";
 import {ImageService} from "../../../services";
-import PostCardAvatar from "./PostCardAvatar";
+import PostCardHeader from "./PostCardHeader";
 import Image from "next/image";
 
 const PostCard:React.FC<Post>=(props)=>{
     return(
         <div className={styles.PostCard}>
-            <PostCardAvatar user={props.owner}/>
+            <PostCardHeader user={props.owner}/>
             {
                 props.pictureName!==undefined &&
                 <div className={styles.ImageDiv}>

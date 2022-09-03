@@ -1,10 +1,10 @@
-import styles from './PostCardButton.module.scss'
+import styles from './PostCardFooter.module.scss'
 import React from "react";
 import {CommentOutlined, DislikeFilled, DislikeOutlined, LikeFilled, LikeOutlined} from "@ant-design/icons";
 import {useTypedDispatch} from "../../../../hooks";
 import {DeletePostReviewThunk, SetPostReviewThunk} from "../../../../store/thunks/posts";
 
-interface PostCardButtons{
+interface PostCardFooter {
     isLiked:boolean
     isDisliked:boolean
     likesCount:number
@@ -12,7 +12,7 @@ interface PostCardButtons{
     _id:string
 }
 
-const PostCardButtons:React.FC<PostCardButtons>=({_id,isLiked,isDisliked,likesCount,dislikeCount})=>{
+const PostCardButtons:React.FC<PostCardFooter>=({_id,isLiked,isDisliked,likesCount,dislikeCount})=>{
 
     const dispatch=useTypedDispatch()
 

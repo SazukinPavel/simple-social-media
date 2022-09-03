@@ -8,7 +8,7 @@ interface TitleProps{
 const Title:React.FC<TitleProps>=({children})=>{
     return(
         <Head>
-            <title>{children +'| Simple Social Media'}</title>
+            <title>{children +' | Simple Social Media'}</title>
         </Head>
     )
 }
