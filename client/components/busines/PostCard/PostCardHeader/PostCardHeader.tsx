@@ -1,5 +1,5 @@
 import {ImageService} from "../../../../services";
-import {User} from "../../../../types";
+import {Post, User} from "../../../../types";
 import React from "react";
 import styles from './PostCardHeader.module.scss'
 import {useRouter} from "next/router";
@@ -8,10 +8,10 @@ import PostCardMoreMenu from "./PostCardMoreMenu";
 
 interface PostCardAvatarProps{
     user:User
-    postId:string
+    post:Post
 }
 
-const PostCardHeader:React.FC<PostCardAvatarProps>=({user,postId})=>{
+const PostCardHeader:React.FC<PostCardAvatarProps>=({user,post})=>{
 
     const router=useRouter()
 
@@ -28,7 +28,7 @@ const PostCardHeader:React.FC<PostCardAvatarProps>=({user,postId})=>{
                 <p>{user.username}</p>
             </div>
             <div className={styles.PostCardMenu}>
-                <PostCardMoreMenu postId={postId}/>
+                <PostCardMoreMenu post={post}/>
             </div>
         </div>
     )

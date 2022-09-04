@@ -1,4 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import {
+  BadRequestException,
+  ForbiddenException,
+  Injectable,
+} from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Post } from '../schemas/post.schema';
 import { Model } from 'mongoose';
@@ -91,5 +95,22 @@ export class PostsService {
 
   private getPostsByUser(userId: string) {
     return this.postModel.find({ owner: userId }).populate('owner').lean();
+  }
+
+  private async findByIdOrThrowExeption(id: string) {
+    const post = await this.findById(id);
+    if (post) {
+      return post;
+    }
+    throw new BadRequestException('Post with this id not exist');
+  }
+
+  async deletePost(postId: string, user: User) {
+    const post = await this.findByIdOrThrowExeption(postId);
+    if (post.owner._id.toString() === user._id.toString()) {
+      await this.postModel.findByIdAndDelete(postId);
+      return post;
+    }
+    throw new ForbiddenException('You not own this post');
   }
 }

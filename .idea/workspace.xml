@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9aa3f6-e6d9-441d-88e2-e9c9ec578941" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/hooks/useNavigateTo.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/hooks/useOutsideClick.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/services/LinkConstructService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenuOwner/PostCardMoreMenuOwner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenuOwner/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/thunks/posts/DeletePostThunk.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/client/.env.local" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/services/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/services/LinkConstructService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/LinkConstructService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/services/PostsService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/PostsService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/posts/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/posts/posts.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +118,7 @@
       <workItem from="1662224402275" duration="2436000" />
       <workItem from="1662230506062" duration="2725000" />
       <workItem from="1662279478272" duration="7522000" />
+      <workItem from="1662304172353" duration="1557000" />
     </task>
     <servers />
   </component>

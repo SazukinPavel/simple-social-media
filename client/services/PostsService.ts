@@ -41,4 +41,8 @@ export default class PostsService{
     static findById(postId:string){
         return $axios.get<Post>(this.subPath+postId)
     }
+
+    static deletePost(postId:string){
+        return $axios.delete<Post>((this.subPath+postId))
+    }
 }

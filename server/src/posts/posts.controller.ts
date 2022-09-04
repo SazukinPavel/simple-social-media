@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   Param,
   Post,
@@ -22,7 +23,6 @@ export class PostsController {
 
   @Get()
   getAll(@CurrentUser() user: User, @Query('user') userId: string) {
-    console.log(userId);
     if (userId) {
       return this.postsService.getUserPosts(userId);
     }
@@ -54,5 +54,11 @@ export class PostsController {
       dto.picture = files.picture[0];
     }
     return this.postsService.create(dto, user);
+  }
+
+  @Delete(':id')
+  @UseGuards(AuthGuard)
+  deletePost(@Param('id') id: string, @CurrentUser() user) {
+    return this.postsService.deletePost(id, user);
   }
 }

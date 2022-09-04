@@ -10,6 +10,7 @@ import {
     SetPostReviewThunk
 } from "../thunks/posts";
 import {Post, User} from "../../types";
+import DeletePostThunk from "../thunks/posts/DeletePostThunk";
 
 const initialState:PostsSliceState={posts:[]}
 
@@ -67,6 +68,9 @@ const postsSlice=createSlice({
                     }
                 }
             })
+        })
+        builder.addCase(DeletePostThunk.fulfilled,(state,action)=>{
+            state.posts=state.posts.filter(p=>p._id!==action.payload)
         })
     }
 })

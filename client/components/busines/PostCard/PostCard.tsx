@@ -9,7 +9,7 @@ import Image from "next/image";
 const PostCard:React.FC<Post>=(props)=>{
     return(
         <div className={styles.PostCard}>
-            <PostCardHeader postId={props._id} user={props.owner}/>
+            <PostCardHeader post={props} user={props.owner}/>
             {
                 props.pictureName!==undefined &&
                 <div className={styles.ImageDiv}>
