@@ -1,21 +1,32 @@
 import React from "react";
-import styles from "./PopUpMenu.module.scss";
+import {useOutsideClick} from "../../../hooks";
+import {useLogickTogle} from "../../../hooks/useLogickTogle";
 
 interface PopUpMenuProps{
-    children:React.ReactNode
-    isOpen:boolean
     className?:string
-    toggle:any
+    Trigger:React.ReactNode
+    Menu:React.ReactNode
 }
 
-const PopUpMenu:React.FC<PopUpMenuProps>=({children,className=''})=>{
+const PopUpMenu:React.FC<PopUpMenuProps>=({className='',...props})=>{
+    const [isOpen,toggle]=useLogickTogle()
 
+    const buttonRef=React.useRef(null)
+
+    useOutsideClick(buttonRef, toggle, isOpen);
 
     return(
-        <div className={[styles.PopUpMenu,className].join(' ')}>
-            {children}
+        <div ref={buttonRef} className={className} >
+            <div onClick={toggle}>
+                {props.Trigger}
+            </div>
+            {isOpen && props.Menu}
         </div>
     )
 }
+
+
+//PopUpMenu.Trigger = PopUpMenuTrigger;
+//PopUpMenu.Menu=PopUpMenuMenu;
 
 export default PopUpMenu

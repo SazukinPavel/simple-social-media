@@ -2,26 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9aa3f6-e6d9-441d-88e2-e9c9ec578941" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/ui/PopUpMenu/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/hooks/useLogickTogle.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/hooks/useNavigateTo.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/hooks/useOutsideClick.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/services/LinkConstructService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/client/.env.local" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/PostCardAvatar.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/PostCardAvatar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardAvatar/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/PostCardButton.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardFooter/PostCardFooter.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/PostCardButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardFooter/PostCardFooter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardButtons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardFooter/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/seo/Title/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/seo/Title/Title.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/hooks/useLoading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useLoading.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/services/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,25 +38,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/paveloigen88/Рабочий стол/node/simple-social-network",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/home/paveloigen88/Рабочий стол/node/simple-social-network/server/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network/server/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.Menu" />
       <recent name="$PROJECT_DIR$/client/components/busines" />
       <recent name="$PROJECT_DIR$/client/pages/users/[id]" />
       <recent name="$PROJECT_DIR$/client/components/busines/Lenta" />
@@ -123,6 +117,7 @@
       <workItem from="1662147386466" duration="2083000" />
       <workItem from="1662224402275" duration="2436000" />
       <workItem from="1662230506062" duration="2725000" />
+      <workItem from="1662279478272" duration="7522000" />
     </task>
     <servers />
   </component>

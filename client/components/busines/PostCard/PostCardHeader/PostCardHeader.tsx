@@ -8,9 +8,10 @@ import PostCardMoreMenu from "./PostCardMoreMenu";
 
 interface PostCardAvatarProps{
     user:User
+    postId:string
 }
 
-const PostCardHeader:React.FC<PostCardAvatarProps>=({user})=>{
+const PostCardHeader:React.FC<PostCardAvatarProps>=({user,postId})=>{
 
     const router=useRouter()
 
@@ -27,7 +28,7 @@ const PostCardHeader:React.FC<PostCardAvatarProps>=({user})=>{
                 <p>{user.username}</p>
             </div>
             <div className={styles.PostCardMenu}>
-                <PostCardMoreMenu />
+                <PostCardMoreMenu postId={postId}/>
             </div>
         </div>
     )

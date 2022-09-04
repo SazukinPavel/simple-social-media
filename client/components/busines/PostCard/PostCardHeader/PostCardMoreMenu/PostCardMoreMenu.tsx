@@ -1,19 +1,32 @@
 import {MoreOutlined} from "@ant-design/icons";
 import React from "react";
-import {useLogickTogle} from "../../../../../hooks/useLogickTogle";
 import styles from './PostCardMoreMenu.module.scss'
 import {PopUpMenu} from "../../../../ui";
+import {LinkConstructService} from "../../../../../services";
+import {useNavigateTo} from "../../../../../hooks";
 
-const PostCardMoreMenu=()=>{
-    const [isOpen,toggle]=useLogickTogle(false)
+interface PostCardMoreMenuProps{
+    postId:string
+}
+
+const PostCardMoreMenu:React.FC<PostCardMoreMenuProps>=({postId})=>{
+
+
+    const copyUrl=()=>{
+        navigator.clipboard.writeText(LinkConstructService.constructPostLink(postId))
+    }
+
+    const goToPost=useNavigateTo('/posts/'+postId)
 
     return(
         <div className={styles.More}>
-            <button className={styles.MoreButton} onClick={toggle} ><MoreOutlined/></button>
-            {isOpen &&  <PopUpMenu isOpen={isOpen} className={styles.MoreMenu}>
-                <span>Copy url</span>
-                <span>Open as single</span>
-            </PopUpMenu>}
+            <PopUpMenu
+                Trigger={<button className={styles.MoreButton}><MoreOutlined/></button>}
+                Menu={
+                    <div className={styles.MoreMenu}>
+                        <span onClick={copyUrl}>Copy url</span>
+                        <span onClick={goToPost}>Open as single</span>
+                    </div>}/>
         </div>
     )
 }
