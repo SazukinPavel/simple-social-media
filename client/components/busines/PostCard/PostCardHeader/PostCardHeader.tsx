@@ -5,6 +5,7 @@ import styles from './PostCardHeader.module.scss'
 import {useRouter} from "next/router";
 import Image from "next/image";
 import PostCardMoreMenu from "./PostCardMoreMenu";
+import { LittleImage } from "../../../ui";
 
 interface PostCardAvatarProps{
     user:User
@@ -22,9 +23,7 @@ const PostCardHeader:React.FC<PostCardAvatarProps>=({user,post})=>{
     return(
         <div className={styles.PostCardAvatar}>
             <div onClick={goToUser} className={styles.Avatar}>
-                <div className={styles.AvatarContainer}>
-                    <Image unoptimized={true} loader={()=>ImageService.getAvatar(user.avatarPicture)} src={ImageService.getAvatar(user.avatarPicture)} width="100%" height="100%" layout="responsive" />
-                </div>
+                <LittleImage loader={()=>ImageService.getAvatar(user.avatarPicture)} src={ImageService.getAvatar(user.avatarPicture)}/>
                 <p>{user.username}</p>
             </div>
             <div className={styles.PostCardMenu}>

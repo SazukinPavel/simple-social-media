@@ -2,7 +2,6 @@ import {
   Body,
   Controller,
   Get,
-  HttpException,
   Param,
   Put,
   UploadedFiles,
@@ -39,8 +38,14 @@ export class UsersController {
     return this.usersService.updateUser(dto, user);
   }
 
+  @Get()
+  getAll(){
+    return this.usersService.getAll()
+  }
+
   @Get(':id')
   getUserById(@Param('id') id: string) {
     return this.usersService.findUserById(id);
   }
+
 }

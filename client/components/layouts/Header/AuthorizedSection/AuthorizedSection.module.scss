@@ -3,7 +3,7 @@
   p{
     color: white;
   }
-  button{
+  .LogoutButton{
     background-color: #2e97ff;
     font-size: 1.5rem;
     color: white;
@@ -18,5 +18,42 @@
     font-size: 1.5rem;
     color: white;
     margin: auto auto auto 1rem;
+  }
+  .UserMenu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1rem;
+    left: 80%;
+    padding:  0.5rem 0;
+    background-color: #eae8e8;
+    border-radius: 5%;
+    width: 6rem;
+    a{
+      color: black;
+      margin: 0 0.5rem;
+      font-size: 1rem;
+      transition: all 1s;
+      &:hover{
+        color: #5e5d5d;
+      }
+    }
+  }
+  .UserIcon{
+    margin: auto;
+    button{
+      font-size: 1.7rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      border: none;
+      background-color: #2e97ff;
+      color:white;
+      svg{
+        &:hover{
+      transition: all 1s;
+          color: lightgray;
+        }
+      }
+    }
   }
 }

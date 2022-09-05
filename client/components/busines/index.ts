@@ -3,11 +3,13 @@ import UserAvatar from "./UserAvatar";
 import PostList from "./PostList";
 import Lenta from "./Lenta";
 import UserCard from "./UserCard";
+import UsersList from "./UsersList";
 
 export {
     PostCard,
     UserAvatar,
     PostList,
     Lenta,
-    UserCard
+    UserCard,
+    UsersList
 }

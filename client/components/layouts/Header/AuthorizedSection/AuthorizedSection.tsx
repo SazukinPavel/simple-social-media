@@ -4,7 +4,7 @@ import styles from './AuthorizedSection.module.scss'
 import {LogoutOutlined, UserOutlined} from "@ant-design/icons";
 import {useTypedDispatch} from "../../../../hooks";
 import LogoutThunk from "../../../../store/thunks/auth/LogoutThunk";
-import {Link} from "../../../ui";
+import {Link, PopUpMenu} from "../../../ui";
 
 interface AuthorizedSectionProps{
     user:User
@@ -21,10 +21,16 @@ const AuthorizedSection:FC<AuthorizedSectionProps>=({user})=>{
     return (
         <div className={styles.AuthorizedSection}>
             <p>{user.username}</p>
-            <Link href={'/posts/me'}>
-                <UserOutlined/>
-            </Link>
-            <button onClick={logoutClick}>
+            <div className={styles.UserIcon}>
+            <PopUpMenu Trigger={<button><UserOutlined/></button>} Menu={
+                <div className={styles.UserMenu}>
+                    <Link href={'/posts/me'}>My profile</Link>
+                    <Link href={'/posts'}>Posts</Link>
+                    <Link href={'/users'}>Users</Link>
+                </div>
+            }></PopUpMenu>
+            </div>
+            <button className={styles.LogoutButton} onClick={logoutClick}>
                 <LogoutOutlined/>
             </button>
         </div>

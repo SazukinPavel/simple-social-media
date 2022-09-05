@@ -1,6 +1,7 @@
 import $axios from "../api/axios";
 import {UpdateUserDto} from "../types/dto";
 import {User} from "../types";
+import axios from "axios";
 
 export default class UsersService{
 
@@ -19,5 +20,9 @@ export default class UsersService{
 
     static getUserById(id:string){
         return $axios.get<User>(this.subPath+id)
+    }
+
+    static getAll(){
+        return $axios.get<User[]>(this.subPath)
     }
 }
