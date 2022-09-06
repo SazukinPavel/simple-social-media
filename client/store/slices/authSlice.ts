@@ -39,7 +39,7 @@ const authSlice=createSlice({
         setIsTryAuthorize(state){
             state.isTryAuthorize=true
         },
-        setUser(state,action:PayloadAction<User>){
+        updateUser(state,action:PayloadAction<User>){
             state.user=action.payload
         }
     },
@@ -65,6 +65,6 @@ const authSlice=createSlice({
     }
 })
 
-export const {login,resetError,setIsTryAuthorize,setUser}=authSlice.actions
+export const {login,resetError,setIsTryAuthorize,updateUser}=authSlice.actions
 
 export const authReducer=authSlice.reducer

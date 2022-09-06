@@ -24,8 +24,8 @@ export class UsersService {
     return user;
   }
 
-  getAll(){
-    return this.userModel.find()
+  getAll() {
+    return this.userModel.find();
   }
 
   findUserById(id: string) {
@@ -49,6 +49,7 @@ export class UsersService {
   }
 
   async updateUser({ avatarImage, bio }: UpdateUserDto, user: User) {
+    bio = bio || '';
     if (avatarImage) {
       const avatarPicturePath = await this.fileService.saveFile(
         FileType.IMAGE,

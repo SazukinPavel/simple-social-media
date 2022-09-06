@@ -2,6 +2,8 @@ import {Post} from "../../../../../../types";
 import React from "react";
 import {useTypedDispatch} from "../../../../../../hooks";
 import DeletePostThunk from "../../../../../../store/thunks/posts/DeletePostThunk";
+import {useLogickTogle} from "../../../../../../hooks/useLogickTogle";
+import EditPostModal from "../../../../../modals/EditPostModal";
 
 interface PostCardMoreMenuOwnerProps{
     post:Post
@@ -9,6 +11,7 @@ interface PostCardMoreMenuOwnerProps{
 
 const PostCardMoreMenuOwner:React.FC<PostCardMoreMenuOwnerProps>=({post})=>{
 
+    const [isOpen,toggle]=useLogickTogle()
     const dispatch=useTypedDispatch()
 
     const deletePost=()=>{
@@ -18,7 +21,8 @@ const PostCardMoreMenuOwner:React.FC<PostCardMoreMenuOwnerProps>=({post})=>{
     return(
         <>
             <span onClick={deletePost}>Delete post</span>
-            <span>Edit post</span>
+            <span onClick={toggle}>Edit post</span>
+            <EditPostModal isOpen={isOpen} toggle={toggle}/>
         </>
     )
 }

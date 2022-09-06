@@ -11,12 +11,12 @@ interface PopUpMenuProps{
 const PopUpMenu:React.FC<PopUpMenuProps>=({className='',...props})=>{
     const [isOpen,toggle]=useLogickTogle()
 
-    const buttonRef=React.useRef(null)
+    const divRef=React.useRef(null)
 
-    useOutsideClick(buttonRef, toggle, isOpen);
+    useOutsideClick(divRef, toggle, isOpen);
 
     return(
-        <div ref={buttonRef} className={className} >
+        <div ref={divRef} className={className} >
             <div onClick={toggle}>
                 {props.Trigger}
             </div>
@@ -24,9 +24,5 @@ const PopUpMenu:React.FC<PopUpMenuProps>=({className='',...props})=>{
         </div>
     )
 }
-
-
-//PopUpMenu.Trigger = PopUpMenuTrigger;
-//PopUpMenu.Menu=PopUpMenuMenu;
 
 export default PopUpMenu

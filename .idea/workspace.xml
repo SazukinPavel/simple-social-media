@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9aa3f6-e6d9-441d-88e2-e9c9ec578941" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/components/modals/EditPostModal/EditPostModal.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/modals/EditPostModal/EditPostModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/modals/EditPostModal/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/ui/ModalWindow/ModalWindow.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/ui/ModalWindow/ModalWindow.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/ui/ModalWindow/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/busines/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenuOwner/PostCardMoreMenuOwner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenuOwner/PostCardMoreMenuOwner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/posts/me/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/me/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/services/UsersService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/UsersService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/users/users.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/slices/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/authSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/users/users.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,23 +41,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network/server/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/paveloigen88/Рабочий стол/node/simple-social-network",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "/home/paveloigen88/Рабочий стол/node/simple-social-network/client/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.Menu" />
@@ -118,6 +124,7 @@
       <workItem from="1662304172353" duration="1557000" />
       <workItem from="1662356062218" duration="21000" />
       <workItem from="1662396897550" duration="905000" />
+      <workItem from="1662482058165" duration="3527000" />
     </task>
     <servers />
   </component>

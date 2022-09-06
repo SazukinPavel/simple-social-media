@@ -9,10 +9,12 @@ export default class UsersService{
 
     static updateUser({avatarPicture,bio}:UpdateUserDto){
         const fd=new FormData()
-        if(avatarPicture){
+        if(avatarPicture?.length){
             fd.append('avatarPicture',avatarPicture[0])
         }
-        fd.append('bio',bio)
+        if(bio){
+            fd.append('bio',bio)
+        }
         return $axios.put<User>(this.subPath,fd,{headers: {
                 'Content-Type': 'multipart/form-data;'
         }})

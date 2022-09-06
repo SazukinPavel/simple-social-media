@@ -5,6 +5,7 @@ import FormInput from "./FormInput";
 import PopUpMenu from "./PopUpMenu";
 import LittleImage from "./LittleImage";
 import AvatarImage from "./AvatarImage";
+import ModalWindow from "./ModalWindow";
 
 export {
     FormInput,
@@ -13,5 +14,6 @@ export {
     Link,
     PopUpMenu,
     LittleImage,
-    AvatarImage
+    AvatarImage,
+    ModalWindow
 }

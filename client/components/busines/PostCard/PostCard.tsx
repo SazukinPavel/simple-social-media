@@ -1,10 +1,10 @@
 import React from "react";
 import Post from "../../../types/Post";
 import styles from './PostCard.module.scss'
-import PostCardButtons from "./PostCardFooter";
 import {ImageService} from "../../../services";
 import PostCardHeader from "./PostCardHeader";
 import Image from "next/image";
+import PostCardFooter from "./PostCardFooter";
 
 const PostCard:React.FC<Post>=(props)=>{
     return(
@@ -20,7 +20,7 @@ const PostCard:React.FC<Post>=(props)=>{
                 <span className={styles.UserName}>{props.owner?.username}:</span>
                 <span className={styles.UserText}>{props.text}</span>
             </p>
-            <PostCardButtons {...props}/>
+            <PostCardFooter {...props}/>
         </div>
     )
 }
