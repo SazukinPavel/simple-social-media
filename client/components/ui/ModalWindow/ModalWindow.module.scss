@@ -1,28 +1,29 @@
-.ModalWindow{
+.ModalWindow {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(0,0,0,0.8);
+  background-color: rgb(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  .ModalContent{
+
+  .ModalContent {
     position: absolute;
     padding: 1rem;
     opacity: 1;
     border-radius: 0.5rem;
-    background-color:rgba(255,255,255, 1);
+    background-color: rgba(255, 255, 255, 1);
 
-    .CloseButton{
+    .CloseButton {
       position: relative;
       display: flex;
       justify-content: right;
-      svg{
+
+      svg {
         font-size: 2rem;
       }
     }
   }
-
 }

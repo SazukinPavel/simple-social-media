@@ -6,12 +6,11 @@ import PostReviewResponseDto from "./PostReviewResponse.dto";
 import SetPostReviewDto from "./SetPostReview.dto";
 import UpdateUserDto from "./UpdateUser.dto";
 export {
-    LoginDto,
-    RegisterDto,
-    PostReviewResponseDto,
-    AuthDto,
-    SetPostReviewDto,
-    AddPostDto,
-    UpdateUserDto
-
-}
+  LoginDto,
+  RegisterDto,
+  PostReviewResponseDto,
+  AuthDto,
+  SetPostReviewDto,
+  AddPostDto,
+  UpdateUserDto,
+};

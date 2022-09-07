@@ -8,12 +8,12 @@ import AvatarImage from "./AvatarImage";
 import ModalWindow from "./ModalWindow";
 
 export {
-    FormInput,
-    Button,
-    LoadingButton,
-    Link,
-    PopUpMenu,
-    LittleImage,
-    AvatarImage,
-    ModalWindow
-}
+  FormInput,
+  Button,
+  LoadingButton,
+  Link,
+  PopUpMenu,
+  LittleImage,
+  AvatarImage,
+  ModalWindow,
+};

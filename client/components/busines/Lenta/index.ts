@@ -1,1 +1,1 @@
-export {default} from './Lenta'
+export { default } from "./Lenta";

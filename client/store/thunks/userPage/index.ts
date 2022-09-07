@@ -1,6 +1,3 @@
 import GetUserThunk from "./GetUserThunk";
 
-
-export {
-    GetUserThunk
-}
+export { GetUserThunk };

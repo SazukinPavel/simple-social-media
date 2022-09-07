@@ -1,1 +1,1 @@
-export {default} from './NotAuthorizedSection'
+export { default } from "./NotAuthorizedSection";

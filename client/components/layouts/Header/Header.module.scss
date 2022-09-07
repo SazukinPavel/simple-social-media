@@ -1,20 +1,19 @@
-.Header{
+.Header {
   background-color: #2e97ff;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 3rem;
-  .Logo{
+  .Logo {
     display: flex;
     justify-content: center;
-    a{
+    a {
       color: white;
       font-size: 40px;
       transition: all 1s;
       margin: auto;
-      &:hover{
+      &:hover {
         color: lightgray;
       }
     }
   }
-
 }

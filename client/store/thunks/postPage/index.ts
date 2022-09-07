@@ -1,5 +1,3 @@
 import GetPostThunk from "./GetPostThunk";
 
-export {
-    GetPostThunk
-}
+export { GetPostThunk };

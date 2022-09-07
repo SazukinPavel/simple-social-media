@@ -1,4 +1,4 @@
-export default interface LoginDto{
-    emailOrName:string
-    password:string
+export default interface LoginDto {
+  emailOrName: string;
+  password: string;
 }

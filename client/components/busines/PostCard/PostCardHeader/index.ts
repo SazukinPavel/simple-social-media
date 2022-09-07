@@ -1,1 +1,1 @@
-export {default} from './PostCardHeader'
+export { default } from "./PostCardHeader";

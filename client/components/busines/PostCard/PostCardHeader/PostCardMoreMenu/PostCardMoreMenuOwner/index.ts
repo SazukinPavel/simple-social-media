@@ -1,1 +1,1 @@
-export {default} from './PostCardMoreMenuOwner'
+export { default } from "./PostCardMoreMenuOwner";

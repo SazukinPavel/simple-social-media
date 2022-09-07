@@ -1,9 +1,9 @@
-.PostCard{
+.PostCard {
   margin: 1rem 5rem;
-  .ImageDiv{
+  .ImageDiv {
     display: block;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       margin-left: auto;
@@ -11,14 +11,14 @@
       border-radius: 5%;
     }
   }
- p{
-   font-size: 1rem;
-   .UserName{
+  p {
+    font-size: 1rem;
+    .UserName {
       color: black;
       font-weight: 1000;
       margin: 0 0.5rem;
-   }
-   .UserText{
-   }
- }
+    }
+    .UserText {
+    }
+  }
 }

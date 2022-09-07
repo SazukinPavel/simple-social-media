@@ -5,11 +5,4 @@ import Lenta from "./Lenta";
 import UserCard from "./UserCard";
 import UsersList from "./UsersList";
 
-export {
-    PostCard,
-    UserAvatar,
-    PostList,
-    Lenta,
-    UserCard,
-    UsersList
-}
+export { PostCard, UserAvatar, PostList, Lenta, UserCard, UsersList };

@@ -1,5 +1,5 @@
-import {User} from "../../types/User";
+import { User } from "../../types/User";
 
-export default interface UsersSliceState{
-    users:User[]
+export default interface UsersSliceState {
+  users: User[];
 }

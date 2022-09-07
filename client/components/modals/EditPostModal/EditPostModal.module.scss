@@ -1,24 +1,23 @@
-.EditPostModal{
-
-    h3{
-        text-align: center;
-        font-size: 1.5rem;
+.EditPostModal {
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  width: 40%;
+  height: 50%;
+  form.Form {
+    label {
+      color: black;
     }
-    width: 40%;
-    height: 50%;
-    form.Form{
-        label{
-            color: black;
-        }
-        div span{
-            color: black;
-            margin: 0.5rem auto;
-            font-size: 1rem;
-        }
-
-        .Buttons{
-            display: flex;
-            justify-content: center;
-        }
+    div span {
+      color: black;
+      margin: 0.5rem auto;
+      font-size: 1rem;
     }
+
+    .Buttons {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

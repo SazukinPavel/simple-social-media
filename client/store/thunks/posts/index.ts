@@ -7,11 +7,11 @@ import FetchUserPosts from "./FetchUserPosts";
 import UpdatePostThunk from "./UpdatePostThunk";
 
 export {
-    FetchMyPosts,
-    AddPostThunk,
-    FetchPosts,
-    DeletePostReviewThunk,
-    SetPostReviewThunk,
-    FetchUserPosts,
-    UpdatePostThunk
-}
+  FetchMyPosts,
+  AddPostThunk,
+  FetchPosts,
+  DeletePostReviewThunk,
+  SetPostReviewThunk,
+  FetchUserPosts,
+  UpdatePostThunk,
+};

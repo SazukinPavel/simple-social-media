@@ -1,5 +1,5 @@
-import {useLogickTogle} from "./useLogickTogle";
+import { useLogickTogle } from "./useLogickTogle";
 
-export const useLoading=(initLoading=false)=>{
-    return useLogickTogle(initLoading)
-}
+export const useLoading = (initLoading = false) => {
+  return useLogickTogle(initLoading);
+};

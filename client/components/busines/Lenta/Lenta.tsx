@@ -1,18 +1,17 @@
-import {useTypedSelector} from "../../../hooks";
+import { useTypedSelector } from "../../../hooks";
 import AddPost from "./AddPost";
-import styles from './Lenta.module.scss'
-import {PostList} from "../index";
+import styles from "./Lenta.module.scss";
+import { PostList } from "../index";
 
-const Lenta=()=>{
+const Lenta = () => {
+  const { posts } = useTypedSelector((state) => state.posts);
 
-    const {posts}=useTypedSelector(state => state.posts)
+  return (
+    <div className={[styles.Lenta].join("")}>
+      <AddPost />
+      <PostList posts={posts} />
+    </div>
+  );
+};
 
-    return(
-        <div className={[styles.Lenta].join('')}>
-            <AddPost/>
-            <PostList posts={posts}/>
-        </div>
-    )
-}
-
-export default Lenta
+export default Lenta;

@@ -2,33 +2,193 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9aa3f6-e6d9-441d-88e2-e9c9ec578941" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/components/modals/EditPostModal/EditPostModal.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/modals/EditPostModal/EditPostModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/modals/EditPostModal/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/ui/ModalWindow/ModalWindow.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/ui/ModalWindow/ModalWindow.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/ui/ModalWindow/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/queries/axiosBaseQuery.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/axios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/Lenta/AddPost/AddPost.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/Lenta/AddPost/AddPost.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/Lenta/AddPost/AddPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/Lenta/AddPost/AddPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/Lenta/AddPost/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/Lenta/AddPost/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/Lenta/Lenta.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/Lenta/Lenta.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/Lenta/Lenta.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/Lenta/Lenta.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/Lenta/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/Lenta/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardFooter/PostCardFooter.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardFooter/PostCardFooter.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardFooter/PostCardFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardFooter/PostCardFooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardFooter/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardFooter/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenuOwner/PostCardMoreMenuOwner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenuOwner/PostCardMoreMenuOwner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenuOwner/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/PostCardMoreMenuOwner/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/PostCardMoreMenu/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/PostCardHeader/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostCard/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostCard/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostList/PostList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostList/PostList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/PostList/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/PostList/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserAvatar/UserAvatar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UserAvatar/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserAvatar/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UserCard/UserBio/UserBio.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserCard/UserBio/UserBio.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UserCard/UserBio/UserBio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserCard/UserBio/UserBio.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UserCard/UserBio/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserCard/UserBio/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UserCard/UserCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserCard/UserCard.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UserCard/UserCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserCard/UserCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UserCard/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UserCard/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UsersList/UsersList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UsersList/UsersList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UsersList/UsersList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UsersList/UsersList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UsersList/UsersListItem/UsersListItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UsersList/UsersListItem/UsersListItem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UsersList/UsersListItem/UsersListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UsersList/UsersListItem/UsersListItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UsersList/UsersListItem/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UsersList/UsersListItem/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/UsersList/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/UsersList/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/busines/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/busines/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Footer/Footer.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/Footer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Footer/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/AuthorizedSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/AuthorizedSection/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/NotAuthorizedSection/NotAuthorizedSection.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/NotAuthorizedSection/NotAuthorizedSection.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/NotAuthorizedSection/NotAuthorizedSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/NotAuthorizedSection/NotAuthorizedSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/NotAuthorizedSection/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/NotAuthorizedSection/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/Header/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/Header/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/MyLayout/MyLayout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/MyLayout/MyLayout.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/MyLayout/MyLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/MyLayout/MyLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/layouts/MyLayout/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/layouts/MyLayout/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/modals/EditPostModal/EditPostModal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/modals/EditPostModal/EditPostModal.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/modals/EditPostModal/EditPostModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/modals/EditPostModal/EditPostModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/modals/EditPostModal/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/modals/EditPostModal/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/seo/Title/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/seo/Title/Title.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/seo/Title/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/seo/Title/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/AvatarImage/AvatarImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/AvatarImage/AvatarImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/AvatarImage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/AvatarImage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Button/Button.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/Button/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Button/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/FormInput/FormInput.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/FormInput/FormInput.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/FormInput/FormInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/FormInput/FormInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/FormInput/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/FormInput/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/Link/Link.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Link/Link.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/Link/Link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Link/Link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/Link/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Link/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/LittleImage/LittleImage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/LittleImage/LittleImage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/LittleImage/LittleImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/LittleImage/LittleImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/LittleImage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/LittleImage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/LoadingButton/LoadingButton.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/LoadingButton/LoadingButton.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/LoadingButton/LoadingButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/LoadingButton/LoadingButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/LoadingButton/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/LoadingButton/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/ModalWindow/ModalWindow.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/ModalWindow/ModalWindow.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/ModalWindow/ModalWindow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/ModalWindow/ModalWindow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/ModalWindow/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/ModalWindow/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/PopUpMenu/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/PopUpMenu/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/useAuthorize.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useAuthorize.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/useGoBack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useGoBack.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/useLoading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useLoading.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/useLogickTogle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useLogickTogle.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/useNavigateTo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useNavigateTo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/useOutsideClick.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useOutsideClick.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/useRedirect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useRedirect.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/useTypedDispatch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useTypedDispatch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/useTypedSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useTypedSelector.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/404.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/404.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_document.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/posts/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/[id]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/posts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/posts/me/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/posts/me/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/register/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/register/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/users/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/users/[id]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/users/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/users/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/services/AuthService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/AuthService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/services/ImageService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/ImageService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/services/LinkConstructService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/LinkConstructService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/services/PostsService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/PostsService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/services/UsersService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/UsersService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/services/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/services/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/slices/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/authSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/users/users.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/slices/postPageSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/postPageSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/postsSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/slices/userPageSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/userPageSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/slices/usersSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/slices/usersSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/states/AuthSliceState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/states/AuthSliceState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/states/PostPageSliceState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/states/PostPageSliceState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/states/PostsSliceState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/states/PostsSliceState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/states/UserPageSliceState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/states/UserPageSliceState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/states/UsersSliceState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/states/UsersSliceState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/auth/LoginThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/auth/LoginThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/auth/LogoutThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/auth/LogoutThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/auth/RegisterThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/auth/RegisterThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/auth/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/auth/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/postPage/GetPostThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/postPage/GetPostThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/postPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/postPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/AddPostThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/AddPostThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/DeletePostReviewThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/DeletePostReviewThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/DeletePostThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/DeletePostThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/FetchMyPosts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/FetchMyPosts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/FetchPostsThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/FetchPostsThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/FetchUserPosts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/FetchUserPosts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/SetPostReviewThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/SetPostReviewThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/UpdatePostThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/UpdatePostThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/posts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/posts/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/userPage/GetUserThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/userPage/GetUserThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/userPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/userPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/users/FetchUsersThunk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/users/FetchUsersThunk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/thunks/users/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/thunks/users/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/404.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/404.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/Home.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/Login.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/Login.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/Me.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/Me.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/Posts.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/Posts.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/Register.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/Register.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/Users.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/Users.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/Post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/Post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/PostReview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/PostReview.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/dto/AddPost.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/dto/AddPost.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/dto/Auth.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/dto/Auth.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/dto/Login.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/dto/Login.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/dto/PostReviewResponse.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/dto/PostReviewResponse.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/dto/Register.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/dto/Register.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/dto/SetPostReview.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/dto/SetPostReview.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/dto/UpdatePost.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/dto/UpdatePost.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/dto/UpdateUser.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/dto/UpdateUser.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/dto/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/dto/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -41,23 +201,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/paveloigen88/Рабочий стол/node/simple-social-network",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/home/paveloigen88/Рабочий стол/node/simple-social-network/client/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network/server/node_modules/prettier&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/paveloigen88/Рабочий стол/node/simple-social-network/client/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/components/ui/PopUpMenu/PopUpMenu.Menu" />
@@ -125,6 +290,9 @@
       <workItem from="1662356062218" duration="21000" />
       <workItem from="1662396897550" duration="905000" />
       <workItem from="1662482058165" duration="3527000" />
+      <workItem from="1662569379477" duration="392000" />
+      <workItem from="1662569789547" duration="2593000" />
+      <workItem from="1662573408338" duration="83000" />
     </task>
     <servers />
   </component>

@@ -1,8 +1,8 @@
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
-export const useGoBack=()=>{
-    const router=useRouter()
-    return()=>{
-        router.back()
-    }
-}
+export const useGoBack = () => {
+  const router = useRouter();
+  return () => {
+    router.back();
+  };
+};

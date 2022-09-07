@@ -1,40 +1,48 @@
-.InputDiv{
+.InputDiv {
   margin: 10px;
-  label{
+
+  label {
     color: white;
     font-size: 1.2rem;
     display: block;
     margin-bottom: 0.3rem;
   }
-  .Input{
-      border: 0.1rem #2e97ff solid;
-      border-radius: 0.3rem;
-      padding-left: 0.5rem;
-      font-size: 1.2rem;
-      color: black;
-      width: 100%;
-      transition: all 0.5s;
-      &::placeholder {
-        font-size: 1.1rem;
+
+  .Input {
+    border: 0.1rem #2e97ff solid;
+    border-radius: 0.3rem;
+    padding-left: 0.5rem;
+    font-size: 1.2rem;
+    color: black;
+    width: 100%;
+    transition: all 0.5s;
+
+    &::placeholder {
+      font-size: 1.1rem;
+    }
+
+    &:hover {
+      border: 0.1rem #4a95e1 solid;
+    }
+
+    &.Good {
+      input {
+        border: 0.1rem #04de06 solid;
       }
-      &:hover{
-        border: 0.1rem #4a95e1 solid;
+    }
+
+    &.Error {
+      input {
+        border: 0.1rem #ff3a47 solid;
       }
-      &.Good{
-        input{
-          border: 0.1rem #04de06 solid;
-        }
-      }
-      &.Error{
-        input{
-          border: 0.1rem #ff3a47 solid;
-        }
-      }
+    }
   }
-  .Message{
+
+  .Message {
     display: flex;
     min-height: 1.5rem;
-    span{
+
+    span {
       font-size: 1rem;
       margin: auto;
       color: white;

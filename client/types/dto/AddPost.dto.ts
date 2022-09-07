@@ -1,4 +1,4 @@
-export default interface AddPostDto{
-    text:string
-    picture?:FileList
+export default interface AddPostDto {
+  text: string;
+  picture?: FileList;
 }

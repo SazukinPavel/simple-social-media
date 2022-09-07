@@ -1,5 +1,3 @@
 import FetchUsersThunk from "./FetchUsersThunk";
 
-export {
-    FetchUsersThunk
-}
+export { FetchUsersThunk };

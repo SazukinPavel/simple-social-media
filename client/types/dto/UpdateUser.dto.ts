@@ -1,4 +1,4 @@
-export default interface UpdateUserDto{
-    bio:string
-    avatarPicture?:FileList
+export default interface UpdateUserDto {
+  bio: string;
+  avatarPicture?: FileList;
 }

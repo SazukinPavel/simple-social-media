@@ -1,5 +1,5 @@
-import {Post} from "../../types";
+import { Post } from "../../types";
 
-export interface PostPageSliceState{
-    post?:Post
+export interface PostPageSliceState {
+  post?: Post;
 }

@@ -1,22 +1,21 @@
-.PostCardButtons{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 2rem;
-    div{
-        span{
-            margin: 0.2rem auto auto;
-            text-align: center;
-            display: block;
-        }
-        button{
-            border: none;
-            background-color: inherit;
-            svg{
-                color: #2e97ff;
-                font-size: 1.5rem;
-            }
-        }
-
+.PostCardButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 2rem;
+  div {
+    span {
+      margin: 0.2rem auto auto;
+      text-align: center;
+      display: block;
     }
+    button {
+      border: none;
+      background-color: inherit;
+      svg {
+        color: #2e97ff;
+        font-size: 1.5rem;
+      }
+    }
+  }
 }

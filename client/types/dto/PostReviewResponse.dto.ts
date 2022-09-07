@@ -1,3 +1,3 @@
-export default interface PostReviewResponseDto{
-    isSet:boolean
+export default interface PostReviewResponseDto {
+  isSet: boolean;
 }

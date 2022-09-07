@@ -1,19 +1,18 @@
 import axios from "axios";
-import store from "../store";
-import AuthService from "../services/AuthService";
+import { store } from "../store";
 
-const $axios=axios.create({
-    baseURL:process.env.NEXT_PUBLIC_SERVER_URL,
-    withCredentials:true
-})
+const $axios = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_SERVER_URL,
+  withCredentials: true,
+});
 
-$axios.interceptors.request.use((config)=>{
-    const token=store.getState().auth.accessToken
-    if(token && config.headers){
-        config.headers['authorization']=token
-    }
-    return config
-})
+$axios.interceptors.request.use((config) => {
+  const token = store.getState().auth.accessToken;
+  if (token && config.headers) {
+    config.headers["authorization"] = token;
+  }
+  return config;
+});
 
 /*
 $axios.interceptors.response.use((config) => {
@@ -34,4 +33,4 @@ $axios.interceptors.response.use((config) => {
 })
  */
 
-export default $axios
+export default $axios;

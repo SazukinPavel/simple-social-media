@@ -1,6 +1,6 @@
-import {User} from "../User";
+import { User } from "../User";
 
-export default interface AuthDto{
-    user:User
-    accessToken:string
+export default interface AuthDto {
+  user: User;
+  accessToken: string;
 }

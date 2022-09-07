@@ -1,19 +1,19 @@
-import {User} from "./User";
+import { User } from "./User";
 
-export default interface Post{
-    pictureName?: string;
+export default interface Post {
+  pictureName?: string;
 
-    text: string;
+  text: string;
 
-    likesCount: number;
+  likesCount: number;
 
-    owner: User;
+  owner: User;
 
-    _id:string
+  _id: string;
 
-    isLiked:boolean
+  isLiked: boolean;
 
-    isDisliked:boolean
+  isDisliked: boolean;
 
-    dislikeCount:number
+  dislikeCount: number;
 }

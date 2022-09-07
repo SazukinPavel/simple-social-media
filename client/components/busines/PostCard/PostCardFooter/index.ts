@@ -1,1 +1,1 @@
-export {default} from './PostCardFooter'
+export { default } from "./PostCardFooter";

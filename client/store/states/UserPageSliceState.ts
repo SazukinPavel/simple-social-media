@@ -1,5 +1,5 @@
-import {User} from "../../types";
+import { User } from "../../types";
 
-export default interface UserPageSliceState{
-    user?:User
+export default interface UserPageSliceState {
+  user?: User;
 }

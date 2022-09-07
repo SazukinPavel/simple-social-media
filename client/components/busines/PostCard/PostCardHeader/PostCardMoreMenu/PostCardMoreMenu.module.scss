@@ -1,31 +1,30 @@
-.More{
+.More {
   z-index: 1;
   background-color: white;
-  .MoreButton{
+  .MoreButton {
     font-size: 1.5rem;
     background-color: white;
-    border:none;
+    border: none;
   }
 
-  .MoreMenu{
+  .MoreMenu {
     display: flex;
     flex-direction: column;
     position: relative;
     top: -4rem;
-    padding:  0.5rem 0;
+    padding: 0.5rem 0;
     background-color: #eae8e8;
     border-radius: 5%;
     width: 6rem;
-    span{
+    span {
       margin: 0 0.5rem;
       cursor: pointer;
       white-space: nowrap;
       font-size: 0.8rem;
       transition: all 1s;
-      &:hover{
+      &:hover {
         color: #5e5d5d;
       }
     }
- 
   }
 }

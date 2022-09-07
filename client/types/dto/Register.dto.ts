@@ -1,5 +1,5 @@
-export default interface RegisterDto{
-    username:string
-    email:string
-    password:string
+export default interface RegisterDto {
+  username: string;
+  email: string;
+  password: string;
 }

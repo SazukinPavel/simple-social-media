@@ -1,13 +1,16 @@
-import {createAsyncThunk} from "@reduxjs/toolkit";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import PostsService from "../../../services/PostsService";
 
-const fetchPosts=createAsyncThunk('fetchPosts',async (d, {rejectWithValue}) => {
+const fetchPosts = createAsyncThunk(
+  "fetchPosts",
+  async (d, { rejectWithValue }) => {
     try {
-        const response = await PostsService.fetchPosts()
-        return response.data
+      const response = await PostsService.fetchPosts();
+      return response.data;
     } catch (e) {
-        return rejectWithValue(e)
+      return rejectWithValue(e);
     }
-})
+  }
+);
 
-export default fetchPosts
+export default fetchPosts;

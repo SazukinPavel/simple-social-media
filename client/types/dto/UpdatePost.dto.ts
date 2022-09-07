@@ -1,4 +1,4 @@
-export default interface UpdatePostDto{
-    text:string
-    postId:string
+export default interface UpdatePostDto {
+  text: string;
+  postId: string;
 }

@@ -1,15 +1,15 @@
-.UserListItem{
-    display: flex;
-    padding: 1rem 2rem;
-    margin: 2rem 0.5rem;
-    border: 0.1rem solid black;
-    border-radius: 0.5rem;
-    transition: all 1s;
-    span{
-        margin: auto 1rem;
-    }
+.UserListItem {
+  display: flex;
+  padding: 1rem 2rem;
+  margin: 2rem 0.5rem;
+  border: 0.1rem solid black;
+  border-radius: 0.5rem;
+  transition: all 1s;
+  span {
+    margin: auto 1rem;
+  }
 
-    &:hover{
-        background-color: rgb(158, 205, 217);
-    }
+  &:hover {
+    background-color: rgb(158, 205, 217);
+  }
 }
