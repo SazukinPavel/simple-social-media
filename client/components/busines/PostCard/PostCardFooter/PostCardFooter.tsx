@@ -4,7 +4,7 @@ import {CommentOutlined, DislikeFilled, DislikeOutlined, LikeFilled, LikeOutline
 import {useTypedDispatch} from "../../../../hooks";
 import {DeletePostReviewThunk, SetPostReviewThunk} from "../../../../store/thunks/posts";
 
-interface PostCardFooter {
+interface PostCardFooterProps {
     isLiked:boolean
     isDisliked:boolean
     likesCount:number
@@ -12,7 +12,7 @@ interface PostCardFooter {
     _id:string
 }
 
-const PostCardButtons:React.FC<PostCardFooter>=({_id,isLiked,isDisliked,likesCount,dislikeCount})=>{
+const PostCardFooter:React.FC<PostCardFooterProps>=({_id,isLiked,isDisliked,likesCount,dislikeCount})=>{
 
     const dispatch=useTypedDispatch()
 
@@ -53,4 +53,4 @@ const PostCardButtons:React.FC<PostCardFooter>=({_id,isLiked,isDisliked,likesCou
     </div>
 }
 
-export default PostCardButtons
+export default PostCardFooter

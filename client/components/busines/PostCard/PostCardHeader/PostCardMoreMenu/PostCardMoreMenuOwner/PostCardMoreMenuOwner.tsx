@@ -18,11 +18,14 @@ const PostCardMoreMenuOwner:React.FC<PostCardMoreMenuOwnerProps>=({post})=>{
         dispatch(DeletePostThunk(post._id))
     }
 
-    return(
+    return (
         <>
             <span onClick={deletePost}>Delete post</span>
-            <span onClick={toggle}>Edit post</span>
-            <EditPostModal isOpen={isOpen} toggle={toggle}/>
+            <span onClick={(e)=>{console.log(2);
+            e.stopPropagation()
+                toggle()
+            }}>Edit post</span>
+            <EditPostModal post={post} isOpen={isOpen} toggle={()=>toggle()}/>
         </>
     )
 }

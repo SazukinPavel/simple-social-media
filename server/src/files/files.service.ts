@@ -11,7 +11,7 @@ export class FilesService {
     try {
       const fileExtension = file.originalname.split('.').pop();
       const fileName = v4() + '.' + fileExtension;
-      const filePath = resolve(__dirname, '..', 'static', type);
+      const filePath = this.getDirectoryPath(type);
       if (!fs.existsSync(filePath)) {
         fs.mkdirSync(filePath, { recursive: true });
       }
@@ -20,5 +20,21 @@ export class FilesService {
     } catch (e) {
       throw new HttpException(e.message, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+  }
+
+  async removeFile(fileName:string):Promise<boolean>{
+    try {
+      await promises.unlink(this.getDirectoryPath() + '/' + fileName);
+      return true;
+    } catch (e) {
+      throw new HttpException(e.message, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+  }
+
+  private getDirectoryPath(type?:FileType){
+    if(type){
+      return resolve(__dirname, '..', 'static', type);
+    }
+    return resolve(__dirname, '..', 'static');
   }
 }

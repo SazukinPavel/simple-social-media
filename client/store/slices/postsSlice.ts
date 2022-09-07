@@ -7,7 +7,8 @@ import {
     FetchMyPosts,
     FetchPosts,
     FetchUserPosts,
-    SetPostReviewThunk
+    SetPostReviewThunk,
+    UpdatePostThunk
 } from "../thunks/posts";
 import {Post, User} from "../../types";
 import DeletePostThunk from "../thunks/posts/DeletePostThunk";
@@ -54,6 +55,14 @@ const postsSlice=createSlice({
             if(action.payload){
                 state.posts.push(action.payload)
             }
+        })
+        builder.addCase(UpdatePostThunk.fulfilled,(state,action)=>{
+            state.posts=state.posts.map((p)=>{
+                if(p._id===action.payload.postId){
+                    p.text=action.payload.text
+                }
+                return p
+            })
         })
         builder.addCase(SetPostReviewThunk.fulfilled,(state)=>{})
         builder.addCase(DeletePostReviewThunk.fulfilled,(state,action)=>{

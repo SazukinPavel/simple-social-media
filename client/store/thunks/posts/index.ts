@@ -4,6 +4,7 @@ import SetPostReviewThunk from "./SetPostReviewThunk";
 import DeletePostReviewThunk from "./DeletePostReviewThunk";
 import FetchMyPosts from "./FetchMyPosts";
 import FetchUserPosts from "./FetchUserPosts";
+import UpdatePostThunk from "./UpdatePostThunk";
 
 export {
     FetchMyPosts,
@@ -11,5 +12,6 @@ export {
     FetchPosts,
     DeletePostReviewThunk,
     SetPostReviewThunk,
-    FetchUserPosts
+    FetchUserPosts,
+    UpdatePostThunk
 }

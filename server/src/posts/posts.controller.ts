@@ -5,6 +5,7 @@ import {
   Get,
   Param,
   Post,
+  Put,
   Query,
   UploadedFiles,
   UseGuards,
@@ -16,6 +17,7 @@ import { User } from '../schemas/user.schema';
 import { PostsService } from './posts.service';
 import { CreatePostDto } from './dto/CreatePost.dto';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
+import { UpdatePostDto } from './dto/UpdatePost.dto';
 
 @Controller('posts')
 export class PostsController {
@@ -60,5 +62,11 @@ export class PostsController {
   @UseGuards(AuthGuard)
   deletePost(@Param('id') id: string, @CurrentUser() user) {
     return this.postsService.deletePost(id, user);
+  }
+
+  @Put()
+  @UseGuards(AuthGuard)
+  updatePost(@Body() dto:UpdatePostDto,@CurrentUser() user){
+    return this.postsService.updatePost(dto,user)
   }
 }

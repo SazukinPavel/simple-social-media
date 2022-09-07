@@ -13,6 +13,7 @@ import PostResponseDto from './dto/PostResponse.dto';
 import { FilesService } from '../files/files.service';
 import { FileType } from '../types/FileType';
 import { UsersService } from '../users/users.service';
+import { UpdatePostDto } from './dto/UpdatePost.dto';
 
 @Injectable()
 export class PostsService {
@@ -60,7 +61,7 @@ export class PostsService {
       .find({
         owner: user,
       })
-      .populate('post')
+      .populate('owner')
       .lean();
   }
 
@@ -89,6 +90,7 @@ export class PostsService {
   }
 
   async getUserPosts(userId: string) {
+    
     const user = await this.userService.findByIdOrThrowExeption(userId);
     return this.constructPostResponse(await this.getPostsByUser(userId), user);
   }
@@ -109,8 +111,19 @@ export class PostsService {
     const post = await this.findByIdOrThrowExeption(postId);
     if (post.owner._id.toString() === user._id.toString()) {
       await this.postModel.findByIdAndDelete(postId);
+      if(post.pictureName){
+        await this.fileService.removeFile(post.pictureName)
+      }
       return post;
     }
     throw new ForbiddenException('You not own this post');
+  }
+
+  async updatePost({postId,text}:UpdatePostDto,user:User){
+    const post=await this.findByIdOrThrowExeption(postId)
+    if(post.owner._id=user._id){
+      return await this.postModel.findByIdAndUpdate(postId,{text})
+    }
+    throw new ForbiddenException('Its not your post!')
   }
 }

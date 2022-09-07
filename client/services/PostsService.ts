@@ -1,6 +1,7 @@
 import $axios from "../api/axios";
 import {AddPostDto, PostReviewResponseDto, SetPostReviewDto} from "../types/dto";
 import {Post} from "../types";
+import UpdatePostDto from "../types/dto/UpdatePost.dto";
 
 export default class PostsService{
 
@@ -44,5 +45,9 @@ export default class PostsService{
 
     static deletePost(postId:string){
         return $axios.delete<Post>((this.subPath+postId))
+    }
+
+    static updatePost(dto:UpdatePostDto){
+        return $axios.put(this.subPath,dto)
     }
 }

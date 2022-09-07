@@ -8,7 +8,7 @@ interface AvatarImageProps{
 
 const AvatarImage:React.FC<AvatarImageProps>=({pictureName})=>{
     return (
-        <LittleImage loader={()=>ImageService.getAvatar(pictureName)} src={ImageService.getAvatar(pictureName)}/>
+        <LittleImage src={ImageService.getAvatar(pictureName)}/>
     )
 }
 
