@@ -24,21 +24,22 @@ export class PostsController {
   constructor(private postsService: PostsService) {}
 
   @Get()
-  getAll(@CurrentUser() user: User, @Query('user') userId: string) {
-    if (userId) {
+  getAll(@CurrentUser() user: User, @Query('user') userId: string,@Query('me') me:boolean) {
+    if(me){
+      return this.postsService.getUserPosts(user._id);
+    }
+    else if (userId) {
       return this.postsService.getUserPosts(userId);
     }
     return this.postsService.getPosts(user);
   }
 
-  @Get('me')
-  @UseGuards(AuthGuard)
-  getUserPosts(@CurrentUser() user) {
-    return this.postsService.getUserPosts(user._id);
-  }
 
   @Get(':id')
-  findById(@Param('id') id: string) {
+  findById(@Param('id') id: string,@Query('comments') comments:boolean) {
+    if(comments){
+      return this.postsService.findByIdWithComments(id)
+    }
     return this.postsService.findById(id);
   }
 

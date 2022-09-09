@@ -1,4 +1,4 @@
-import { DispatchType } from "../store";
+import { RootDispatch } from "../store";
 import { useDispatch } from "react-redux";
 
-export const useTypedDispatch: () => DispatchType = useDispatch;
+export const useTypedDispatch: () => RootDispatch = useDispatch;

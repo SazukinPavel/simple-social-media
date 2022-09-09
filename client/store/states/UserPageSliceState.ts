@@ -1,5 +1,5 @@
 import { User } from "../../types";
 
 export default interface UserPageSliceState {
-  user?: User;
+  user: User | null;
 }

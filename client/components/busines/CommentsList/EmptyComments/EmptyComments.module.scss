@@ -1,0 +1,17 @@
+.EmptyComments{
+    border: 0.2rem solid #2e97ff;
+    display: flex;
+    justify-content: center;
+    margin: 0rem 2rem;
+    padding: 2rem;
+    flex-direction: column;
+    border-radius: 0.3rem;
+    span{
+        margin: auto;
+        margin-bottom: 0.4rem;
+        font-size: 1.5rem;
+    }
+    p{
+        margin: auto;
+    }
+}

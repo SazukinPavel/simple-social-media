@@ -16,7 +16,7 @@ export default class PostsService {
   }
 
   static fetchMyPosts() {
-    return $axios.get<Post[]>(this.subPath + "me");
+    return $axios.get<Post[]>(this.subPath,{params:{me:true}});
   }
 
   static createPost({ picture, text }: AddPostDto) {
@@ -48,6 +48,10 @@ export default class PostsService {
 
   static findById(postId: string) {
     return $axios.get<Post>(this.subPath + postId);
+  }
+
+  static findByIdWithComments(postId:string){
+    return $axios.get<Post>(this.subPath + postId,{params:{comments:true}})
   }
 
   static deletePost(postId: string) {

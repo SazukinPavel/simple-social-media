@@ -1,4 +1,5 @@
 import { User } from "./User";
+import Comment from "./Comment";
 
 export default interface Post {
   pictureName?: string;
@@ -16,4 +17,6 @@ export default interface Post {
   isDisliked: boolean;
 
   dislikeCount: number;
+
+  comments?:Comment[]
 }

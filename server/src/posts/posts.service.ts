@@ -28,6 +28,10 @@ export class PostsService {
     return this.postModel.findById(id).populate('owner').lean();
   }
 
+  findByIdWithComments(id:string){
+    return this.findById(id).populate('comments')
+  }
+
   private getAll() {
     return this.postModel.find().populate('owner').lean();
   }
@@ -92,14 +96,14 @@ export class PostsService {
   async getUserPosts(userId: string) {
     
     const user = await this.userService.findByIdOrThrowExeption(userId);
-    return this.constructPostResponse(await this.getPostsByUser(userId), user);
+    return this.constructPostResponse(await this.getPostsByUser(userId) as Post[], user);
   }
 
   private getPostsByUser(userId: string) {
     return this.postModel.find({ owner: userId }).populate('owner').lean();
   }
 
-  private async findByIdOrThrowExeption(id: string) {
+  async findByIdOrThrowExeption(id: string) {
     const post = await this.findById(id);
     if (post) {
       return post;

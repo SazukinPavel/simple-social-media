@@ -12,6 +12,7 @@ import { SetPostReviewDto } from './dto/SetPostReview.dto';
 import { User } from '../schemas/user.schema';
 import { UpdatePostReviewDto } from './dto/UpdatePostReview.dto';
 import PostReviewResponseDto from './dto/PostReviewResponse.dto';
+import { Post } from 'src/schemas/post.schema';
 
 @Injectable()
 export class PostReviewsService {
@@ -85,7 +86,7 @@ export class PostReviewsService {
   }
 
   async setPostReview(dto: SetPostReviewDto, user: User) {
-    const post = await this.postsService.findById(dto.postId);
+    const post = (await this.postsService.findById(dto.postId))as Post;
     if (!post) {
       throw new BadRequestException('This post was not found');
     }
@@ -93,7 +94,7 @@ export class PostReviewsService {
     if (postReview) {
       return this.updatePostReview({ isPositive: dto.isPositive, postReview });
     }
-    return await this.createPostReview({ ...dto, post, owner: user });
+    return await this.createPostReview({ ...dto, post , owner: user });
   }
 
   private findByUserAndPostId(user: User, postId: string) {
@@ -102,7 +103,7 @@ export class PostReviewsService {
         post: postId,
         user,
       })
-      .populate('post');
+      .populate('post')
   }
 
   async deleteReview(

@@ -11,6 +11,7 @@ import { PostReviewsModule } from './post-reviews/post-reviews.module';
 import { FilesModule } from './files/files.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { CommentsModule } from './comments/comments.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { join } from 'path';
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, 'static'),
     }),
+    CommentsModule
   ],
   controllers: [],
   providers: [JwtService],

@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
 import { authReducer } from "./slices/authSlice";
 import { postsReducer } from "./slices/postsSlice";
 import { userPageReducer } from "./slices/userPageSlice";
@@ -6,19 +6,27 @@ import { postPageReducer } from "./slices/postPageSlice";
 import { usersReducer } from "./slices/usersSlice";
 import { createWrapper } from "next-redux-wrapper";
 
-export const store = configureStore({
-  reducer: {
-    auth: authReducer,
-    posts: postsReducer,
-    userPage: userPageReducer,
-    postPage: postPageReducer,
-    users: usersReducer,
-  },
-});
+const makeStore = () => {
+  return configureStore({
+    reducer: {
+      auth: authReducer,
+      posts: postsReducer,
+      userPage: userPageReducer,
+      postPage: postPageReducer,
+      users: usersReducer,
+    },
+  });
+};
 
+export const store = makeStore();
 export type RootDispatch = typeof store.dispatch;
-export type RootState = ReturnType<typeof store.getState>;
+export type RootStore = ReturnType<typeof makeStore>;
+export type RootState = ReturnType<RootStore["getState"]>;
+export type AppThunk<ReturnType = void> = ThunkAction<
+  ReturnType,
+  RootState,
+  unknown,
+  Action
+>;
 
-const makeStore = () => store;
-
-export const wrapper = createWrapper(makeStore);
+export const wrapper = createWrapper<RootStore>(makeStore);

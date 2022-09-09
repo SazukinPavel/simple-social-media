@@ -3,14 +3,14 @@ import UserPageSliceState from "../states/UserPageSliceState";
 import { GetUserThunk } from "../thunks/userPage";
 import { User } from "../../types";
 
-const initialState: UserPageSliceState = { user: undefined };
+const initialState: UserPageSliceState = { user: null };
 
 const userPageSlice = createSlice({
   name: "userPage",
   initialState,
   reducers: {
     resetUser(state) {
-      state.user = undefined;
+      state.user = null;
     },
     setUserPageUser(state, action: PayloadAction<User>) {
       state.user = action.payload;
